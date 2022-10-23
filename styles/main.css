@@ -538,3 +538,22 @@ main > div {
         display: flex;
     }
 }
+
+
+
+@media (max-width:420px){
+    #content-about{
+/*         background: red; */
+        height: 100%;
+    }
+    #content-about{
+        font-size: 13px;
+    }
+    .profile div:first-child{
+        height: 30%;
+    }
+    .profile img{
+        width: 150px;
+        height: 150px;
+    }
+}
