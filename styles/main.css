@@ -63,7 +63,7 @@ main > div {
     position: fixed;
     top: 0;
     left: 0;
-
+    overflow-y: scroll;
     width: 100%;
     height: 100%;
 
@@ -301,14 +301,16 @@ main > div {
     width: 80%;
     height: 80%;
     display: flex;
-    /* background-color: red; */
+    flex-direction: column;
+    
   }
 
   .profile {
-    width: 80%;
-    /* background: crimson; */
+    width: 90%;
+/*     background: crimson; */
     display: flex;
     margin: 0 auto; 
+    gap: 5em;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -318,7 +320,9 @@ main > div {
       font-size: 1em;
       color: #8c38ff;
   }
-
+  .profile .btn-grad{
+    display: none;
+}
   .profile h1 span{
       color: #fff;
   }
@@ -334,11 +338,11 @@ main > div {
   .profile div:nth-child(2) {
     width: 100%;
     height: 50%;
-    /* background: cyan; */
+/*     background: cyan; */
     display: flex;
     flex-direction: column;
     align-items: baseline;
-    margin-left: 30px;
+/*     margin-left: 30px; */
     gap: 10px;
     justify-content: center;
     color: purple;
@@ -353,9 +357,9 @@ main > div {
 
 
   .content-data {
-    height: 100%;
-    /* background: orange; */
-    display: none;
+    /* height: 100%; */
+/*     background: orange; */
+    display: flex;
     margin: auto;
     flex-direction: column;
     justify-content: space-around;
@@ -541,11 +545,15 @@ main > div {
         display: inline;
     }
 
+    #content-about{
+        flex-direction: row;
+    }
     .profile .btn-grad{
         display: none;
     }
     .content-data{
         display: flex;
+        height: 100%;
     }
 
 
