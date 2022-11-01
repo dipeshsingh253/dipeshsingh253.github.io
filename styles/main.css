@@ -421,7 +421,9 @@ main > div {
     align-items: center;
   }
 
-
+  .content-data a{
+    text-decoration: none;
+  }
   .btn-grad {
     width: 150px;
     background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%);
@@ -429,6 +431,7 @@ main > div {
     padding: 15px 45px;
     text-align: center;
     text-transform: uppercase;
+   
     transition: 0.5s;
     background-size: 200% auto;
     color: white;
@@ -444,6 +447,13 @@ main > div {
     text-decoration: none;
   }
 
+
+
+
+
+
+
+/* animation keyframes */
 @keyframes shring-animation {
     0% {
         background-position: 0 0;
@@ -511,6 +521,9 @@ main > div {
     }
 }
 
+
+
+/* css for above 768px width */
 @media (min-width:768px) {
 
     .hamburger,
@@ -559,7 +572,7 @@ main > div {
 
 }
 
-
+/* css for below 420px width */
 
 @media (max-width:420px){
     .intro-box h1:nth-child(1){
