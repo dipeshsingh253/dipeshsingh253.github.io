@@ -448,7 +448,16 @@ main > div {
   }
 
 
-
+  #content-stack {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    /* background: red; */
+    
+  }
 
 
 
