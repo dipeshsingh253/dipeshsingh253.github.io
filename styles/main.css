@@ -502,9 +502,11 @@ main>div {
     flex-direction: column;
     gap: 50px;
 }
-#content-skills h1{
+
+#content-skills h1 {
     border-bottom: 3px solid var(--primary);
 }
+
 #content-skills>div:nth-child(1) {
     width: 100%;
     /* background: rebeccapurple; */
@@ -918,9 +920,10 @@ svg{
     }
 
     #content-skills {
-   
+
         flex-direction: row;
     }
+
     #content-skills>div:nth-child(1) {
         width: 50%;
     }
@@ -969,6 +972,21 @@ svg{
         gap: 5px;
     }
 
+    #content-skills>div:nth-child(2) {
+        position: relative;
+        top: 300px;
+    }
+
+    .layer-1,
+    .layer-2 {
+        justify-content: center;
+        align-items: center;
+    }
+    .layer-2{
+        padding-bottom: 100px;
+
+    }
+
     /* #tech-stack{
         padding-top: 10rem;
     } */
@@ -984,5 +1002,9 @@ svg{
         border: 1px solid var(--primary);
         padding: 3px;
         border-radius: 1em;
+    }
+    #content-skills>div:nth-child(2) {
+        position: relative;
+        top: 400px;
     }
 }
