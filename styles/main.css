@@ -54,7 +54,7 @@ nav {
 
 }
 
-main > div {
+main>div {
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -84,12 +84,12 @@ main > div {
     display: flex !important;
 }
 
-.fadeout{
+.fadeout {
     animation: fadingout 8s forwards;
 
 }
 
-.fadein{
+.fadein {
     animation: fadingin 10s forwards;
 
 }
@@ -237,27 +237,27 @@ main > div {
     display: flex;
 }
 
-#home{
+#home {
     display: flex;
     color: #FFF;
 }
 
-.container{
+.container {
     display: none;
 }
 
-.intro-box{
+.intro-box {
     display: block;
 
 }
 
-.container h1{
+.container h1 {
     text-transform: none;
     font-size: 40px;
     font-weight: 500;
 }
 
-.container h1:nth-child(2){
+.container h1:nth-child(2) {
     color: var(--primary);
 }
 
@@ -281,7 +281,7 @@ main > div {
     overflow: hidden;
     width: 170px;
     animation: type 2s steps(40, end) forwards;
-   
+
 }
 
 .intro-box h1:nth-child(2) {
@@ -302,63 +302,66 @@ main > div {
     height: 80%;
     display: flex;
     flex-direction: column;
-    
-  }
 
-  .profile {
+}
+
+.profile {
     width: 90%;
-/*     background: crimson; */
+    /*     background: crimson; */
     display: flex;
-    margin: 0 auto; 
+    margin: 0 auto;
     gap: 5em;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .profile h1{
-      font-size: 1em;
-      color: #8c38ff;
-  }
-  .profile .btn-grad{
+.profile h1 {
+    font-size: 1em;
+    color: #8c38ff;
+}
+
+.profile .btn-grad {
     display: none;
 }
-  .profile h1 span{
-      color: #fff;
-  }
-  .profile div:first-child {
+
+.profile h1 span {
+    color: #fff;
+}
+
+.profile div:first-child {
     width: 100%;
     height: 50%;
     /* background: brown; */
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .profile div:nth-child(2) {
+.profile div:nth-child(2) {
     width: 100%;
     height: 50%;
-/*     background: cyan; */
+    /*     background: cyan; */
     display: flex;
     flex-direction: column;
     align-items: baseline;
-/*     margin-left: 30px; */
+    /*     margin-left: 30px; */
     gap: 10px;
     justify-content: center;
     color: purple;
-  }
+}
 
-  .profile img {
+.profile img {
     width: 250px;
     height: 250px;
     border-radius: 50%;
     border: 3px solid var(--primary);
-  }
+}
 
 
-  .content-data {
+.content-data {
     /* height: 100%; */
-/*     background: orange; */
+    /*     background: orange; */
     display: flex;
     margin: auto;
     flex-direction: column;
@@ -368,17 +371,18 @@ main > div {
     margin-left: 5%;
     gap: 30px;
 
-  }
+}
 
-  .content-data h1{
+.content-data h1 {
     font-size: 1.1rem;
     color: #9733EE;
-  }
+}
 
-  .content-data p{
+.content-data p {
     font-size: 1.1rem;
-  }
-  .content-data div:nth-child(1) {
+}
+
+.content-data div:nth-child(1) {
     padding-top: 5%;
     /* width: 95%;
     height: 30%; */
@@ -387,9 +391,9 @@ main > div {
     flex-direction: column;
     gap: 10px;
     justify-content: center;
-  }
+}
 
-  .content-data div:nth-child(2) {
+.content-data div:nth-child(2) {
     /* width: 95%;
     height: 30%; */
     /* background-color: orchid; */
@@ -397,9 +401,9 @@ main > div {
     flex-direction: column;
     gap: 10px;
     justify-content: center;
-  }
+}
 
-  .content-data div:nth-child(3) {
+.content-data div:nth-child(3) {
     /* width: 95%;
     height: 30%; */
     /* background-color: lightsalmon; */
@@ -408,9 +412,9 @@ main > div {
     flex-direction: column;
     gap: 10px;
     justify-content: center;
-  }
+}
 
-  .content-data div:nth-child(4) {
+.content-data div:nth-child(4) {
     /* height: 10%; */
     /* background-color: lawngreen; */
     display: flex;
@@ -419,36 +423,37 @@ main > div {
     gap: 10px;
     justify-content: right;
     align-items: center;
-  }
+}
 
-  .content-data a{
+.content-data a {
     text-decoration: none;
-  }
-  .btn-grad {
+}
+
+.btn-grad {
     width: 150px;
     background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%);
     margin: 10px;
     padding: 15px 45px;
     text-align: center;
     text-transform: uppercase;
-   
+
     transition: 0.5s;
     background-size: 200% auto;
     color: white;
     box-shadow: 0 0 20px #eee;
     border-radius: 10px;
     display: block;
-  }
+}
 
-  .btn-grad:hover {
+.btn-grad:hover {
     background-position: right center;
     /* change the direction of the change here */
     color: #fff;
     text-decoration: none;
-  }
+}
 
 
-  #content-stack {
+#content-stack {
     width: 80%;
     height: 80%;
     display: flex;
@@ -456,10 +461,36 @@ main > div {
     text-align: center;
     justify-content: space-around;
     /* background: red; */
-    
-  }
+
+}
+
+/* #content-stack div{
+    display: flex;
+    flex-direction: column;
+  } */
 
 
+
+#content-stack div {
+    display: inline-flex;
+    /* background: blue; */
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+#content-stack img {
+    border: 1px solid var(--primary);
+    padding: 10px;
+    border-radius: 1em;
+}
+
+/* .svg{
+    padding: 10px;
+    width: 96px;
+    height: 96px;
+  } */
 
 
 /* animation keyframes */
@@ -512,20 +543,22 @@ main > div {
     }
 }
 
-@keyframes fadingout{
-    0%{
+@keyframes fadingout {
+    0% {
         opacity: 1;
     }
-    100%{
+
+    100% {
         opacity: 0;
     }
 }
 
-@keyframes fadingin{
-    0%{
+@keyframes fadingin {
+    0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
@@ -548,32 +581,34 @@ main > div {
         display: flex;
     }
 
-    .intro-box h1:nth-child(1){
+    .intro-box h1:nth-child(1) {
         font-size: 20px;
-        
+
     }
 
-    .intro-box h1:nth-child(2){
+    .intro-box h1:nth-child(2) {
         font-size: 100px;
     }
 
-    .container h1{
+    .container h1 {
         font-size: 60px;
         font-weight: 500;
-        
+
     }
 
-    .container span{
+    .container span {
         display: inline;
     }
 
-    #content-about{
+    #content-about {
         flex-direction: row;
     }
-    .profile .btn-grad{
+
+    .profile .btn-grad {
         display: none;
     }
-    .content-data{
+
+    .content-data {
         display: flex;
         height: 100%;
     }
@@ -583,28 +618,44 @@ main > div {
 
 /* css for below 420px width */
 
-@media (max-width:420px){
-    .intro-box h1:nth-child(1){
+@media (max-width:420px) {
+    .intro-box h1:nth-child(1) {
         font-size: 15px;
-        
+
     }
 
-    .intro-box h1:nth-child(2){
+    .intro-box h1:nth-child(2) {
         font-size: 80px;
     }
 
-    #content-about{
-/*         background: red; */
+    #content-about {
+        /*         background: red; */
         height: 100%;
     }
-    #content-about{
+
+    #content-about {
         font-size: 13px;
     }
-    .profile div:first-child{
+
+    .profile div:first-child {
         height: 30%;
     }
-    .profile img{
+
+    .profile img {
         width: 150px;
         height: 150px;
+    }
+
+    #content-stack {
+        width: 90%;
+        /* background: red; */
+    }
+
+    #content-stack img {
+        padding: 5px;
+    }
+
+    #content-stack div {
+        gap: 5px;
     }
 }
