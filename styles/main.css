@@ -492,6 +492,24 @@ main>div {
     height: 96px;
   } */
 
+  #contact{
+    justify-content: space-around;
+    /* background: rebeccapurple; */
+  }
+#contact>span {
+    display: flex;
+    width: 80%;
+    /* border: 1px solid rebeccapurple; */
+    justify-content: space-around;
+    /* background: red; */
+}
+
+#contact a {
+    font-size: 0.8em;
+    color: var(--primary);
+}
+
+
 
 /* animation keyframes */
 @keyframes shring-animation {
@@ -668,7 +686,21 @@ main>div {
     #content-stack div {
         gap: 5px;
     }
-    #tech-stack{
+
+    /* #tech-stack{
         padding-top: 10rem;
+    } */
+}
+
+
+@media(max-height:800px) {
+    #content-stack {
+        gap: 30px;
+    }
+
+    #content-stack img {
+        border: 1px solid var(--primary);
+        padding: 3px;
+        border-radius: 1em;
     }
 }
