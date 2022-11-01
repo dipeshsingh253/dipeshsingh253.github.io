@@ -693,6 +693,11 @@ svg{
 } */
 
 
+#projects > h1{
+    margin-bottom: 50px;
+    border-bottom: 3px solid var(--primary);
+}
+
 
 #contact {
     justify-content: space-around;

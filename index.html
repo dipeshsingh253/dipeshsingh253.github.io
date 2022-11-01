@@ -8,9 +8,11 @@
   <title>Dipesh Singh : Full Stack Web Developer</title>
 
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/project.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
 </head>
 
 <body>
@@ -219,7 +221,95 @@
       </div>
     </div>
     <div id="projects">
-      <h1>Projects</h1>
+      <h1>My Projects</h1>
+      <div class="carousel">
+
+
+        <div class="carousel__nav">
+          <span id="moveLeft" class="carousel__arrow">
+            <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
+            </svg>
+          </span>
+          <span id="moveRight" class="carousel__arrow">
+            <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+            </svg>
+          </span>
+        </div>
+
+        <div class="carousel-item carousel-item--1">
+          <div class="carousel-item__image"></div>
+          <div class="carousel-item__info">
+            <div class="carousel-item__container">
+             
+              <h1 class="carousel-item__title">Coschedule Clone</h1>
+              <h2 class="carousel-item__subtitle"> Tech Stack : HTML/CSS,   Java Script,   Git Hub </h2>
+              <p class="carousel-item__description">
+                This is a Team project. In this project I have managed to create two pages one is Coschedule Guide and 10x Marketing Formula page.
+              </p>
+              <a href="https://shorturl.at/kpsxB" class="carousel-item__btn"> <i class="fa-brands fa-github fa-3x"></i></a>
+              <a href="https://shorturl.at/fsRUY" class="carousel-item__btn"><i class="fa-solid fa-link fa-3x"></i></a>
+
+            </div>
+          </div>
+        </div>
+
+
+        <!--
+         <div class="carousel-item carousel-item--2">
+          <div class="carousel-item__image"></div>
+          <div class="carousel-item__info">
+            <div class="carousel-item__container">
+              <h2 class="carousel-item__subtitle">The big window </h2>
+              <h1 class="carousel-item__title">Minimal window</h1>
+              <p class="carousel-item__description">Clear Glass Window With Brown and White Wooden Frame iste natus
+                error sit voluptatem accusantium doloremque laudantium.</p>
+              <a href="#" class="carousel-item__btn">Read the article</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item carousel-item--3">
+          <div class="carousel-item__image"></div>
+          <div class="carousel-item__info">
+            <div class="carousel-item__container">
+              <h2 class="carousel-item__subtitle">Tropical palms </h2>
+              <h1 class="carousel-item__title">Palms</h1>
+              <p class="carousel-item__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium, totam rem aperiam.</p>
+              <a href="#" class="carousel-item__btn">Explore the palms</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item carousel-item--4">
+          <div class="carousel-item__image"></div>
+          <div class="carousel-item__info">
+            <div class="carousel-item__container">
+              <h2 class="carousel-item__subtitle">Beach </h2>
+              <h1 class="carousel-item__title">The beach </h1>
+              <p class="carousel-item__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium, totam rem aperiam.</p>
+              <a href="#" class="carousel-item__btn">Explore the beach</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item carousel-item--5">
+          <div class="carousel-item__image"></div>
+          <div class="carousel-item__info">
+            <div class="carousel-item__container">
+              <h2 class="carousel-item__subtitle">The white building </h2>
+              <h1 class="carousel-item__title">White building</h1>
+              <p class="carousel-item__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium, totam rem aperiam.</p>
+              <a href="#" class="carousel-item__btn">Read the article</a>
+            </div>
+          </div>
+        </div> -->
+
+      </div>
     </div>
     <div id="contact">
       <h1>contact me</h1>
@@ -246,36 +336,8 @@
 
   <script src="scripts/main.js"></script>
   <script src="scripts/typed.js"></script>
-  <!-- <script>
-    let number1 = document.getElementById("num1");
-    let number2 = document.getElementById("num2");
-    let counter = 0;
-    let counter1 = 2;
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    setInterval(() => {
-      if (counter == 65) {
-        console.log(counter);
-        clearInterval();
-      } else {
-
-        counter++;
-        console.log(counter);
-        number1.innerHTML = counter + "%";
-      }
-    }, 30);
-
-
-    setInterval(() => {
-      if (counter1 == 85) {
-        console.log(counter);
-        clearInterval();
-      } else {
-        counter1++;
-        console.log(counter);
-        number2.innerHTML = counter1 + "%";
-      }
-    }, 30);
-  </script> -->
 </body>
 
 </html>
