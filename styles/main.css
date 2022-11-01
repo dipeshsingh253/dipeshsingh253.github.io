@@ -668,4 +668,7 @@ main>div {
     #content-stack div {
         gap: 5px;
     }
+    #tech-stack{
+        padding-top: 10rem;
+    }
 }
