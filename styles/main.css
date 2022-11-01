@@ -492,10 +492,205 @@ main>div {
     height: 96px;
   } */
 
-  #contact{
+#content-skills {
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    /* background: red; */
+    display: flex;
+    list-style: none;
+}
+
+#content-skills>div:nth-child(1) {
+    width: 50%;
+    /* background: rebeccapurple; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+
+/* li{
+    list-style: none;
+} */
+#content-skills>div:nth-child(1)>div {
+    width: 80%;
+}
+
+.bar {
+    width: 100%;
+    background: var(--light);
+    display: block;
+    height: 20px;
+    /* border: 1 px solid var(--light); */
+    /* outline: 1px solid white; */
+    border-radius: 10px;
+    overflow: hidden;
+    /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); */
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+/* .bar:hover{
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+} */
+
+.bar>span {
+    height: 100%;
+    float: left;
+    background: var(--primary);
+}
+
+.html {
+    width: 90%;
+    animation: html 3s;
+}
+
+.css {
+    width: 85%;
+    animation: html 3s;
+}
+
+.js {
+    width: 80%;
+    animation: html 3s;
+}
+
+.mysql {
+    width: 80%;
+    animation: html 3s;
+}
+
+.java {
+    width: 90%;
+    animation: html 3s;
+}
+
+
+#content-skills>div:nth-child(2) {
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    /* background: lightcoral; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.layer-1,
+.layer-2 {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+
+.progress-bar {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 50%;
+    /* outline: 1px solid rgba(209, 197, 252, 0.5); */
+    outline: 1px solid var(--primary);
+    outline-offset: -1px;
+    /* background: red; */
+}
+
+.progress-bar::after,
+.num {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+ .circle{
+    stroke:var(--primary);
+    stroke-width:20; 
+    stroke-dasharray: 410;
+    stroke-dashoffset: 410;
+    fill:none;
+    transform: rotate(-90deg);
+    animation: fillBar 3s linear forwards;
+
+} 
+.creativity {
+    animation: fillBar95 3s linear forwards;
+
+}
+
+.team-wrok{
+    animation: fillBar80 3s linear forwards;
+}
+
+.accountability{
+    animation: fillBar90 3s linear forwards;
+}
+
+.criticalThinking{
+    animation: fillBar85 3s linear forwards;
+}
+
+/* 
+.outer {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    background: red;
+    border: 1px solid red;
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+        -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.inner {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid purple;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+        inset 4px 4px 6px -1px rgba(255, 255, 255, 0.7),
+        -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+        0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+        0px 12px 10px -10px rgba(0, 0, 0, 0.5);
+}
+
+
+#num{
+    font-weight: 600;
+    color: #555;
+}
+
+circle{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: anim 2s linear forwards;
+}
+
+svg{
+    position: relative;
+    background: green;
+    bottom: 160px;
+} */
+
+
+
+#contact {
     justify-content: space-around;
     /* background: rebeccapurple; */
-  }
+}
+
 #contact>span {
     display: flex;
     width: 80%;
@@ -510,6 +705,79 @@ main>div {
 }
 
 
+@keyframes html {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes css {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes js {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes mysql {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes java {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes fillBar95 {
+    100% {
+        stroke-dashoffset: 25;
+    }
+}
+
+@keyframes fillBar90 {
+    100% {
+        stroke-dashoffset: 50;
+    }
+}
+
+@keyframes fillBar85 {
+    100% {
+        stroke-dashoffset: 75;
+    }
+}
+
+@keyframes fillBar80 {
+    100% {
+        stroke-dashoffset: 100;
+    }
+}
 
 /* animation keyframes */
 @keyframes shring-animation {

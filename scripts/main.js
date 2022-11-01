@@ -285,6 +285,8 @@ function skillsClick() {
     if (contact_id.classList.contains("vis")) {
         contact_id.classList.toggle("vis");
     }
+
+    displayPercentage();
     print();
 }
 
@@ -610,7 +612,7 @@ function skillsClickMobile() {
     }
 
     hamburgerToggle();
-
+    displayPercentage();
     print();
 }
 
@@ -727,6 +729,75 @@ function contactsClickMobile() {
 function hamburgerToggle() {
     hamburger.classList.toggle("is-active");
     mobile_menu.classList.toggle("is-open");
+}
+
+
+function displayPercentage(){
+    displayPercentageAccountability();
+    displayPercentageCreativity();
+    displayPercentageCriticalThinking();
+    displayPercentageTeamWrok();
+}
+
+
+function displayPercentageCriticalThinking(){
+    let count = document.getElementById("criticalThinking");
+    let temp = 0;
+
+    setInterval(()=>{
+        if(temp == 85){
+            clearInterval();
+        }else{
+            temp++;
+            count.innerHTML = temp+" % ";
+        }
+    },33);
+    
+}
+
+function displayPercentageAccountability(){
+    let count = document.getElementById("accountability");
+    let temp = 0;
+
+    setInterval(()=>{
+        if(temp == 90){
+            clearInterval();
+        }else{
+            temp++;
+            count.innerHTML = temp+" % ";
+        }
+    },33);
+    
+}
+
+function displayPercentageTeamWrok(){
+    let count = document.getElementById("team-wrok");
+    let temp = 0;
+
+    setInterval(()=>{
+        if(temp == 80){
+            clearInterval();
+        }else{
+            temp++;
+            count.innerHTML = temp+" % ";
+        }
+    },33);
+    
+}
+
+function displayPercentageCreativity(){
+    let count = document.getElementById("creativity");
+    let temp = 0;
+
+    setInterval(()=>{
+        if(temp == 95){
+            clearInterval();
+        }else{
+            temp++;
+            count.innerHTML = temp+" % ";
+        }
+    },33);
+    
 }
 
 function print() {
