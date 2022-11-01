@@ -732,7 +732,7 @@ function hamburgerToggle() {
 }
 
 
-function displayPercentage(){
+function displayPercentage() {
     displayPercentageAccountability();
     displayPercentageCreativity();
     displayPercentageCriticalThinking();
@@ -740,64 +740,64 @@ function displayPercentage(){
 }
 
 
-function displayPercentageCriticalThinking(){
+function displayPercentageCriticalThinking() {
     let count = document.getElementById("criticalThinking");
     let temp = 0;
 
-    setInterval(()=>{
-        if(temp == 85){
+    setInterval(() => {
+        if (temp == 85) {
             clearInterval();
-        }else{
+        } else {
             temp++;
-            count.innerHTML = temp+" % ";
+            count.innerHTML = temp + " % ";
         }
-    },33);
-    
+    }, 33);
+
 }
 
-function displayPercentageAccountability(){
+function displayPercentageAccountability() {
     let count = document.getElementById("accountability");
     let temp = 0;
 
-    setInterval(()=>{
-        if(temp == 90){
+    setInterval(() => {
+        if (temp == 90) {
             clearInterval();
-        }else{
+        } else {
             temp++;
-            count.innerHTML = temp+" % ";
+            count.innerHTML = temp + " % ";
         }
-    },33);
-    
+    }, 33);
+
 }
 
-function displayPercentageTeamWrok(){
+function displayPercentageTeamWrok() {
     let count = document.getElementById("team-wrok");
     let temp = 0;
 
-    setInterval(()=>{
-        if(temp == 80){
+    setInterval(() => {
+        if (temp == 80) {
             clearInterval();
-        }else{
+        } else {
             temp++;
-            count.innerHTML = temp+" % ";
+            count.innerHTML = temp + " % ";
         }
-    },33);
-    
+    }, 33);
+
 }
 
-function displayPercentageCreativity(){
+function displayPercentageCreativity() {
     let count = document.getElementById("creativity");
     let temp = 0;
 
-    setInterval(()=>{
-        if(temp == 95){
+    setInterval(() => {
+        if (temp == 95) {
             clearInterval();
-        }else{
+        } else {
             temp++;
-            count.innerHTML = temp+" % ";
+            count.innerHTML = temp + " % ";
         }
-    },33);
-    
+    }, 33);
+
 }
 
 function print() {

@@ -492,17 +492,21 @@ main>div {
     height: 96px;
   } */
 
+
 #content-skills {
     width: 90%;
     height: 90%;
     margin: auto;
     /* background: red; */
     display: flex;
-    list-style: none;
+    flex-direction: column;
+    gap: 50px;
 }
-
+#content-skills h1{
+    border-bottom: 3px solid var(--primary);
+}
 #content-skills>div:nth-child(1) {
-    width: 50%;
+    width: 100%;
     /* background: rebeccapurple; */
     display: flex;
     flex-direction: column;
@@ -570,7 +574,7 @@ main>div {
 
 
 #content-skills>div:nth-child(2) {
-    width: 50%;
+    width: 100%;
     height: 100%;
     margin: auto;
     /* background: lightcoral; */
@@ -579,6 +583,7 @@ main>div {
     justify-content: center;
     align-items: center;
     gap: 80px;
+    padding-bottom: 100px;
 }
 
 .layer-1,
@@ -609,30 +614,31 @@ main>div {
     transform: translate(-50%, -50%);
 }
 
- .circle{
-    stroke:var(--primary);
-    stroke-width:20; 
+.circle {
+    stroke: var(--primary);
+    stroke-width: 20;
     stroke-dasharray: 410;
     stroke-dashoffset: 410;
-    fill:none;
+    fill: none;
     transform: rotate(-90deg);
     animation: fillBar 3s linear forwards;
 
-} 
+}
+
 .creativity {
     animation: fillBar95 3s linear forwards;
 
 }
 
-.team-wrok{
+.team-wrok {
     animation: fillBar80 3s linear forwards;
 }
 
-.accountability{
+.accountability {
     animation: fillBar90 3s linear forwards;
 }
 
-.criticalThinking{
+.criticalThinking {
     animation: fillBar85 3s linear forwards;
 }
 
@@ -704,6 +710,78 @@ svg{
     color: var(--primary);
 }
 
+
+
+
+/* animation keyframes */
+@keyframes shring-animation {
+    0% {
+        background-position: 0 0;
+        opacity: 0;
+        width: 0;
+    }
+
+    1% {
+        background-position: 0 0;
+        opacity: 1;
+        border-right: 1px solid var(--primary);
+    }
+
+    50% {
+        background-position: 150px 0;
+        opacity: 1;
+        border-right: 1px solid var(--primary);
+    }
+
+    100% {
+        background-position: 400px 0;
+        opacity: 1;
+        border-right: 1px solid var(--primary);
+    }
+}
+
+@keyframes type {
+    0% {
+        width: 0;
+    }
+
+    1%,
+    99% {
+        border-right: 1px solid var(--primary);
+    }
+
+    100% {
+        width: 320px;
+        border-right: none;
+
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes fadingout {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadingin {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 
 @keyframes html {
     0% {
@@ -779,78 +857,6 @@ svg{
     }
 }
 
-/* animation keyframes */
-@keyframes shring-animation {
-    0% {
-        background-position: 0 0;
-        opacity: 0;
-        width: 0;
-    }
-
-    1% {
-        background-position: 0 0;
-        opacity: 1;
-        border-right: 1px solid var(--primary);
-    }
-
-    50% {
-        background-position: 150px 0;
-        opacity: 1;
-        border-right: 1px solid var(--primary);
-    }
-
-    100% {
-        background-position: 400px 0;
-        opacity: 1;
-        border-right: 1px solid var(--primary);
-    }
-}
-
-@keyframes type {
-    0% {
-        width: 0;
-    }
-
-    1%,
-    99% {
-        border-right: 1px solid var(--primary);
-    }
-
-    100% {
-        width: 320px;
-        border-right: none;
-
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-}
-
-@keyframes fadingout {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes fadingin {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-
-
 /* css for above 768px width */
 @media (min-width:768px) {
 
@@ -911,6 +917,14 @@ svg{
         gap: 10px;
     }
 
+    #content-skills {
+   
+        flex-direction: row;
+    }
+    #content-skills>div:nth-child(1) {
+        width: 50%;
+    }
+
 }
 
 /* css for below 420px width */
@@ -960,7 +974,7 @@ svg{
     } */
 }
 
-
+/* css for below 800px height */
 @media(max-height:800px) {
     #content-stack {
         gap: 30px;
