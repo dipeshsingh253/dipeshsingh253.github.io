@@ -259,8 +259,14 @@ I have just modified the code according to my needs.
 
 @media (max-width:420px) {}
 
-@media (max-height:800px) {
+@media (max-height:800px)and (max-width:300px) {
   .carousel-item__description {
     margin: 20px 0;
+  }
+}
+
+@media(max-height:700px) and (min-width:900px) {
+  .carousel__nav{
+    bottom: 50px;
   }
 }

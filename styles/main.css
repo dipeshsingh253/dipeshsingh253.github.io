@@ -329,11 +329,12 @@ main>div::-webkit-scrollbar {
     gap: 10px;
     justify-content: center;
     color: purple;
+    background: red;
 }
 
 .profile img {
-    width: 250px;
-    height: 250px;
+    width: 14em;
+    height: 14em;
     border-radius: 50%;
     border: 3px solid var(--primary);
 }
@@ -876,7 +877,7 @@ main>div::-webkit-scrollbar {
 }
 
 /* css for below 800px height */
-@media(max-height:800px) {
+@media(max-height:800px) and (max-width:300px) {
     #content-stack {
         gap: 30px;
     }
@@ -890,5 +891,15 @@ main>div::-webkit-scrollbar {
     #content-skills>div:nth-child(2) {
         position: relative;
         top: 400px;
+    }
+}
+
+
+@media(max-height:700px) and (min-width:900px){
+    #content-about {
+        padding-top: 6rem;
+    }
+    #content-skills > div:nth-child(2){
+        padding-top: 5rem;
     }
 }
