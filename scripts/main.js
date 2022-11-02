@@ -1,7 +1,7 @@
+// Variables
+
 const hamburger = document.querySelector(".hamburger");
 const mobile_menu = document.querySelector(".mobile-menu");
-
-
 const home = document.querySelector(".home");
 const about_me = document.querySelector(".about-me");
 const tech = document.querySelector(".tech-stack");
@@ -9,6 +9,7 @@ const skills = document.querySelector(".skills");
 const projects = document.querySelector(".projects");
 const contact = document.querySelector(".contact");
 
+// Variables for Mobile Menu (Tabs)
 const home_mobile = document.querySelector(".mobile-menu .home");
 const about_me_mobile = document.querySelector(".mobile-menu .about-me");
 const tech_mobile = document.querySelector(".mobile-menu .tech-stack");
@@ -17,6 +18,7 @@ const projects_mobile = document.querySelector(".mobile-menu .projects");
 const contact_mobile = document.querySelector(".mobile-menu .contact");
 
 
+// Variables for Desktop Top Navigation Bar (Tabs)
 const home_id = document.querySelector("#home");
 const about_me_id = document.querySelector("#about-me");
 const tech_id = document.querySelector("#tech-stack");
@@ -733,6 +735,9 @@ function hamburgerToggle() {
 }
 
 
+
+//Skill Tab Methods
+
 function displayPercentage() {
     displayPercentageAccountability();
     displayPercentageCreativity();
@@ -801,6 +806,8 @@ function displayPercentageCreativity() {
 
 }
 
+
+//Project Methods
 function loadProject() {
 
     $(function () {
@@ -846,6 +853,8 @@ function loadProject() {
     });
 }
 
+
+//Prints elements for finding errors --optional
 function print() {
     console.log(home_id.classList);
     console.log(projects_id.classList);

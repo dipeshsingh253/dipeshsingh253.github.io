@@ -5,14 +5,14 @@ I have just modified the code according to my needs.
 
 
 :root {
-  --primary: #8c38ff;
-  --light: #EEEEEE;
-  --dark: #000;
+  --primaryProj: #8c38ff;
+  --lightProj: #EEEEEE;
+  --darkProj: #000;
 }
 
 #projects>h1 {
   margin-bottom: 50px;
-  border-bottom: 3px solid var(--primary);
+  border-bottom: 3px solid var(--primaryProj);
 }
 
 
@@ -45,9 +45,6 @@ I have just modified the code according to my needs.
   position: absolute;
   z-index: 0;
   transition: 0.6s all linear;
-  /* padding-right: 30px; */
-  /* border: 1px solid var(--primary); */
-
 }
 
 .carousel-item__info {
@@ -59,11 +56,9 @@ I have just modified the code according to my needs.
   display: -webkit-flex;
   -webkit-justify-content: space-around;
   -webkit-flex-direction: column;
-  /* border: 1px solid var(--primary); */
   order: 1;
   left: 0;
   margin: 0;
-  /* padding: 0 40px; */
   padding: 0 15px;
   width: 100%;
 
@@ -72,13 +67,11 @@ I have just modified the code according to my needs.
 .carousel-item__image {
   width: 90%;
   text-align: center;
-  /* willing to go with h => 80 */
   order: 2;
   align-self: flex-end;
   flex-basis: 60%;
   padding: 50px;
   padding: auto;
-  /* border: 1px solid red; */
   -webkit-order: 2;
   -webkit-align-self: center;
   -webkit-flex-basis: 60%;
@@ -109,14 +102,12 @@ I have just modified the code according to my needs.
   line-height: 30px;
   letter-spacing: 3px;
   font-weight: 700;
-  /* color: #2C2C2C; */
-  color: var(--primary);
+  color: var(--primaryProj);
   transform: translateY(25%);
   opacity: 0;
   visibility: hidden;
   transition: 0.6s all ease-in-out;
   margin: auto;
-  /* border: 1px solid var(--primary); */
 }
 
 .carousel-item__description {
@@ -125,9 +116,8 @@ I have just modified the code according to my needs.
   visibility: hidden;
   transition: 0.6s all ease-in-out;
   font-size: 15px;
-  color: var(--light);
+  color: var(--lightProj);
   line-height: 22px;
-  /* border: 1px solid var(--primary); */
   margin: 40px 0;
 
 
@@ -156,7 +146,7 @@ I have just modified the code according to my needs.
 }
 
 .carousel-item__btn {
-  color: var(--light);
+  color: var(--lightProj);
   letter-spacing: 3px;
   font-size: 11px;
   text-transform: uppercase;
@@ -168,7 +158,6 @@ I have just modified the code according to my needs.
   opacity: 0;
   visibility: hidden;
   transition: 0.6s all ease-in-out;
-  /* border: 1px solid var(--primary); */
 }
 
 .carousel__nav {
@@ -189,7 +178,7 @@ I have just modified the code according to my needs.
 .carousel__icon:hover {
   font-weight: 600;
   width: 20px;
-  fill: var(--primary);
+  fill: var(--primaryProj);
 }
 
 .carousel__arrow {
@@ -237,7 +226,6 @@ I have just modified the code according to my needs.
 @media (min-width:768px) {
   .carousel-item {
     flex-direction: row;
-    /* border: 3px solid var(--primary); */
   }
 
   .carousel-item__info {

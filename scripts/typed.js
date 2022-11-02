@@ -5,6 +5,8 @@ var typed = new Typed(".dynamic-txt",{
     loop: true
 })
 
+
+//optional if you want to add dynamic sentece or subtitle
 // var typed_sent = new Typed(".dynamic-sen",{
 //     strings:["A focused Java Backend Developer, passionate about implementing technical knowledge in real time projects. "],
 //     typeSpeed: 300,
@@ -14,15 +16,9 @@ var typed = new Typed(".dynamic-txt",{
 
 
 function showAutoTyping() {
-    // document.querySelector(".intro-box").classList.add("fade");
     document.querySelector(".intro-box").style.display = "none";
-
     document.querySelector(".container").style.display = "inline";
 }
-
-// function shuffleAutos(){
-//     setTimeout(showAutoTyping(),2000);
-// }
 
 
 setTimeout(() => {
