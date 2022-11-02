@@ -1,5 +1,5 @@
 :root {
-    --primary: #8c38ff;
+    --primary: #8C38FF;
     --light: #EEEEEE;
     --dark: #000;
 }
@@ -10,6 +10,7 @@
     box-sizing: border-box;
     font-family: sans-serif, "Fira sans";
 }
+
 
 h1 {
     color: #fff;
@@ -51,7 +52,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     color: #FFF;
-    /* padding: 1rem 1.5rem; */
+
 
 }
 
@@ -61,6 +62,9 @@ main>div {
     justify-content: center;
     align-items: center;
 
+    /* Hide scrollbar for IE, Edge and Firefox */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -75,6 +79,11 @@ main>div {
     color: #FFF;
     transition: 0.3s;
 
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+main>div::-webkit-scrollbar {
+    display: none;
 }
 
 .not-vis {
@@ -863,9 +872,10 @@ svg{
 
 /* css for above 768px width */
 @media (min-width:768px) {
-    nav{
+    nav {
         height: auto;
     }
+
     .hamburger,
     .mobile-menu {
         display: none;
