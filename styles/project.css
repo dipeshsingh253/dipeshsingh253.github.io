@@ -59,7 +59,7 @@ I have just modified the code according to my needs.
   order: 1;
   left: 0;
   margin: 0;
-  padding: 0 15px;
+  padding: 0 50px;
   width: 100%;
 
 }
@@ -230,6 +230,7 @@ I have just modified the code according to my needs.
 
   .carousel-item__info {
     height: 80%;
+    padding: 0 15px;
   }
 
   .carousel-item__image {

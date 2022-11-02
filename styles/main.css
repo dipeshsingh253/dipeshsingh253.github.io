@@ -524,8 +524,7 @@ main>div::-webkit-scrollbar {
 
 .layer-1,
 .layer-2 {
-    display: inline-flex;
-    flex-wrap: wrap;
+    display: flex;
     gap: 80px;
 }
 
