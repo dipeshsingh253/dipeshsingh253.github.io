@@ -1,8 +1,14 @@
 :root {
-    --primary: #8c38ff;
-    --light: #EEEEEE;
-    --dark: #000;
+  --primary: #8c38ff;
+  --light: #EEEEEE;
+  --dark: #000;
 }
+
+#projects>h1 {
+  margin-bottom: 50px;
+  border-bottom: 3px solid var(--primary);
+}
+
 
 .carousel {
   width: 100%;
@@ -12,11 +18,14 @@
   max-height: 550px;
   overflow: hidden;
   position: relative;
+
 }
 
 .carousel-item {
   visibility: visible;
   display: flex;
+  flex-direction: column-reverse;
+
   width: 100%;
   height: 100%;
   align-items: center;
@@ -30,42 +39,46 @@
   position: absolute;
   z-index: 0;
   transition: 0.6s all linear;
+  /* padding-right: 30px; */
+  /* border: 1px solid var(--primary); */
+
 }
 
 .carousel-item__info {
-  height: 100%;
+  height: 120%;
   display: flex;
   justify-content: center;
   flex-direction: column;
-
+  align-items: center;
   display: -webkit-flex;
-  -webkit-justify-content: center;
+  -webkit-justify-content: space-around;
   -webkit-flex-direction: column;
-
+  /* border: 1px solid var(--primary); */
   order: 1;
   left: 0;
-  margin: auto;
-  padding: 0 40px;
-  width: 40%;
+  margin: 0;
+  /* padding: 0 40px; */
+  padding: 0 15px;
+  width: 100%;
 
 }
 
 .carousel-item__image {
-  width: 60%;
-
+  width: 90%;
+  text-align: center;
   /* willing to go with h => 80 */
-  height: 100%; 
   order: 2;
   align-self: flex-end;
   flex-basis: 60%;
-
+  padding: 50px;
+  padding: auto;
+  /* border: 1px solid red; */
   -webkit-order: 2;
-  -webkit-align-self: flex-end;
+  -webkit-align-self: center;
   -webkit-flex-basis: 60%;
-
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   position: relative;
   transform: translateX(100%);
   transition: 0.6s all ease-in-out;
@@ -73,9 +86,8 @@
 
 
 .carousel-item__subtitle {
-  /* font-family: 'Open Sans', sans-serif; */
   letter-spacing: 3px;
-  font-size: 15px;
+  font-size: 10px;
   text-transform: uppercase;
   margin: 0;
   color: #7E7E7E;
@@ -87,10 +99,8 @@
 }
 
 .carousel-item__title {
-  /* margin: 15px 0 0 0; */
-  /* font-family: 'Playfair Display', serif; */
   font-size: 25px;
-  line-height: 45px;
+  line-height: 30px;
   letter-spacing: 3px;
   font-weight: 700;
   /* color: #2C2C2C; */
@@ -99,6 +109,8 @@
   opacity: 0;
   visibility: hidden;
   transition: 0.6s all ease-in-out;
+  margin: auto;
+  /* border: 1px solid var(--primary); */
 }
 
 .carousel-item__description {
@@ -106,12 +118,14 @@
   opacity: 0;
   visibility: hidden;
   transition: 0.6s all ease-in-out;
-  margin-top: 35px;
-  /* font-family: 'Open Sans', sans-serif; */
   font-size: 15px;
   color: var(--light);
   line-height: 22px;
-  margin-bottom: 35px;
+  /* border: 1px solid var(--primary); */
+  margin: 40px 0;
+
+
+
 }
 
 .carousel-item--1 .carousel-item__image {
@@ -136,9 +150,7 @@
 }
 
 .carousel-item__btn {
-  width: 35%;
-  color: #2C2C2C;
-  font-family: 'Open Sans', sans-serif;
+  color: var(--light);
   letter-spacing: 3px;
   font-size: 11px;
   text-transform: uppercase;
@@ -150,11 +162,12 @@
   opacity: 0;
   visibility: hidden;
   transition: 0.6s all ease-in-out;
+  /* border: 1px solid var(--primary); */
 }
 
 .carousel__nav {
   position: absolute;
-  left: 0;
+  right: 0;
   z-index: 2;
   background-color: #fff;
   bottom: 0;
@@ -165,6 +178,12 @@
   vertical-align: middle;
   width: 16px;
   fill: #5d5d5d;
+}
+
+.carousel__icon:hover {
+  font-weight: 600;
+  width: 20px;
+  fill: var(--primary);
 }
 
 .carousel__arrow {
@@ -206,4 +225,47 @@
 .active .carousel-item__image {
   transition: 0.6s all ease-in-out;
   transform: translateX(0);
+}
+
+
+@media (min-width:768px) {
+  .carousel-item {
+    flex-direction: row;
+    /* border: 3px solid var(--primary); */
+  }
+
+  .carousel-item__info {
+    height: 80%;
+  }
+
+  .carousel-item__image {
+    width: 80%;
+    height: 100%;
+  }
+
+  .carousel-item__subtitle {
+    font-size: 13px;
+  }
+
+  .carousel-item__title {
+    font-size: 30px;
+    line-height: 45px;
+  }
+
+  .carousel-item__description {
+    margin: 30px 0;
+  }
+
+  .carousel__nav {
+    right: unset;
+    left: 0;
+  }
+}
+
+@media (max-width:420px) {}
+
+@media (max-height:800px) {
+  .carousel-item__description {
+    margin: 20px 0;
+  }
 }

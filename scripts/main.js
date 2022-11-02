@@ -838,7 +838,7 @@ function loadProject() {
             console.log('current ' + current);
             console.log('prev ' + prev);
 
-            if(current == prev){
+            if (current == prev) {
                 alert("No More Projects Available ...");
             }
 

@@ -40,6 +40,7 @@ nav {
     left: 0;
     right: 0;
     z-index: 99; */
+    height: 60px;
     padding: 16px 32px;
     background-color: var(--dark);
     border-bottom: 3px solid var(--primary);
@@ -693,10 +694,6 @@ svg{
 } */
 
 
-#projects > h1{
-    margin-bottom: 50px;
-    border-bottom: 3px solid var(--primary);
-}
 
 
 #contact {
@@ -866,7 +863,9 @@ svg{
 
 /* css for above 768px width */
 @media (min-width:768px) {
-
+    nav{
+        height: auto;
+    }
     .hamburger,
     .mobile-menu {
         display: none;
@@ -933,6 +932,9 @@ svg{
         width: 50%;
     }
 
+    #content-skills>div:nth-child(2) {
+        width: 50%;
+    }
 }
 
 /* css for below 420px width */
@@ -987,7 +989,8 @@ svg{
         justify-content: center;
         align-items: center;
     }
-    .layer-2{
+
+    .layer-2 {
         padding-bottom: 100px;
 
     }
@@ -1008,6 +1011,7 @@ svg{
         padding: 3px;
         border-radius: 1em;
     }
+
     #content-skills>div:nth-child(2) {
         position: relative;
         top: 400px;
