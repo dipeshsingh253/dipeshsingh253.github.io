@@ -130,11 +130,11 @@ I have just modified the code according to my needs.
 
 
 .carousel-item--2 .carousel-item__image {
-  background-image: url('https://images.pexels.com/photos/921294/pexels-photo-921294.png?auto=compress&cs=tinysrgb&h=750&w=1260');
+  background-image: url('../images/projects/mgnrega.png');
 }
 
 .carousel-item--3 .carousel-item__image {
-  background-image: url('https://images.pexels.com/photos/92733/pexels-photo-92733.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+  background-image: url('../images/projects/personalportfolio.png');
 }
 
 .carousel-item--4 .carousel-item__image {
