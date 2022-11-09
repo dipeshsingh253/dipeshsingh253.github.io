@@ -863,4 +863,3 @@ function print() {
     console.log(contact_id.classList);
     console.log(about_me_id.classList);
 }
-

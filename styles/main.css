@@ -63,8 +63,8 @@ main>div {
     align-items: center;
 
     /* Hide scrollbar for IE, Edge and Firefox */
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    /* scrollbar-width: none;
+    -ms-overflow-style: none; */
     position: fixed;
     top: 0;
     left: 0;
