@@ -26,6 +26,7 @@ const skills_id = document.querySelector("#skills");
 const projects_id = document.querySelector("#projects");
 const contact_id = document.querySelector("#contact");
 
+
 hamburger.addEventListener("click", () => { hamburgerToggle(); })
 
 home_mobile.addEventListener("click", () => {
@@ -81,7 +82,7 @@ contact.addEventListener("click", () => {
 //Standard Menu Methods
 
 function homeClick() {
-    window.location.reload();
+   // window.location.reload();
     home.classList.toggle("is-active");
 
     if (home_id.classList.contains("non-vis")) {
@@ -807,51 +808,53 @@ function displayPercentageCreativity() {
 }
 
 
-//Project Methods
-function loadProject() {
+// //Project Methods
+// function loadProject() {
 
-    $(function () {
-        $('.carousel-item').eq(0).addClass('active');
-        var total = $('.carousel-item').length;
-        var current = 0;
-        $('#moveRight').on('click', function () {
-            var next = current;
-            current = current + 1;
-            setSlide(next, current);
-        });
-        $('#moveLeft').on('click', function () {
-            var prev = current;
-            current = current - 1;
-            setSlide(prev, current);
-        });
-        function setSlide(prev, next) {
-            var slide = current;
-            if (next > total - 1) {
-                slide = 0;
-                current = 0;
-            }
-            if (next < 0) {
-                slide = total - 1;
-                current = total - 1;
-            }
-            $('.carousel-item').eq(prev).removeClass('active');
-            $('.carousel-item').eq(slide).addClass('active');
-            setTimeout(function () {
+//     $(function () {
+//         $('.carousel-item').eq(0).addClass('active');
+//         var total = $('.carousel-item').length;
+//         var current = 0;
+//         $('#moveRight').on('click', function () {
+//             var next = current;
+//             current = current + 1;
+//             setSlide(next, current);
+//             console.log("heelo world");
+//         });
+//         $('#moveLeft').on('click', function () {
+//             var prev = current;
+//             current = current - 1;
+//             setSlide(prev, current);
+//             console.log("heelo world");
+//         });
+//         function setSlide(prev, next) {
+//             var slide = current;
+//             if (next > total - 1) {
+//                 slide = 0;
+//                 current = 0;
+//             }
+//             if (next < 0) {
+//                 slide = total - 1;
+//                 current = total - 1;
+//             }
+//             $('.carousel-item').eq(prev).removeClass('active');
+//             $('.carousel-item').eq(slide).addClass('active');
+//             setTimeout(function () {
 
-            }, 800);
+//             }, 800);
 
 
 
-            console.log('current ' + current);
-            console.log('prev ' + prev);
+//             console.log('current ' + current);
+//             console.log('prev ' + prev);
 
-            if (current == prev) {
-                alert("No More Projects Available ...");
-            }
+//             if (current == prev) {
+//                 alert("No More Projects Available ...");
+//             }
 
-        }
-    });
-}
+//         }
+//     });
+// }
 
 
 //Prints elements for finding errors --optional
