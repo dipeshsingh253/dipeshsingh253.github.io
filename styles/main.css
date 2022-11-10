@@ -10,7 +10,8 @@
     box-sizing: border-box;
     font-family: sans-serif, "Fira sans";
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
 
@@ -36,13 +37,15 @@ h1 span:nth-child(even) {
 h1:hover span:nth-child(even) {
     letter-spacing: 0;
 }
-header{
+
+header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 99;
 }
+
 nav {
     /* position: fixed;
     top: 0;
@@ -64,7 +67,7 @@ nav {
 
 }
 
- main>div {
+main>div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,7 +79,7 @@ nav {
     background-color: #000;
     color: #FFF;
     transition: 0.3s;
-} 
+}
 
 
 /* main>div {
@@ -180,15 +183,23 @@ main>div::-webkit-scrollbar {
     background-color: var(--primary);
 }
 
+ul {
+    list-style: none;
+    display: inline-flex;
+}
+
 .menu {
     display: none;
-    /* flex: 1 1 0%;
-    justify-content: flex-end; */
+
     margin: 0 -16px;
 
     display: none;
     align-items: center;
-    /* margin: 0 -1rem; */
+
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .menu a {
