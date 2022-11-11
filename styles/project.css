@@ -10,8 +10,15 @@ I have just modified the code according to my needs.
   --darkProj: #000;
 }
 
+#projects{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* background:rebeccapurple; */
+}
+
 #projects>h1 {
-  margin-bottom: 50px;
+  
   border-bottom: 3px solid var(--primaryProj);
 }
 
@@ -24,6 +31,7 @@ I have just modified the code according to my needs.
   max-height: 550px;
   overflow: hidden;
   position: relative;
+  background: teal;
 
 }
 
@@ -223,7 +231,7 @@ I have just modified the code according to my needs.
 }
 
 
-@media (min-width:768px) {
+@media (min-width:868px) {
   .carousel-item {
     flex-direction: row;
   }
@@ -257,7 +265,12 @@ I have just modified the code according to my needs.
   }
 }
 
-@media (max-width:420px) {}
+@media (max-width:500px) {
+  #projects{
+    margin-top: 800px;
+    
+  }
+}
 
 @media (max-height:800px)and (max-width:300px) {
   .carousel-item__description {
@@ -268,5 +281,12 @@ I have just modified the code according to my needs.
 @media(max-height:700px) and (min-width:900px) {
   .carousel__nav{
     bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 420px) and (max-width: 766px) {
+  #projects{
+    margin-top: 800px;
+    
   }
 }

@@ -247,6 +247,7 @@ function techStackClick() {
 }
 
 function skillsClick() {
+    // window.location.reload();
     skills.classList.toggle("is-active");
 
     if (skills_id.classList.contains("non-vis")) {
@@ -747,6 +748,7 @@ function hamburgerToggle() {
 //Skill Tab Methods
 
 function displayPercentage() {
+
     displayPercentageAccountability();
     displayPercentageCreativity();
     displayPercentageCriticalThinking();
@@ -923,6 +925,8 @@ function loadProject() {
     });
 }
 
+
+//source stack overflow
 function activeTabScroll() {
 
 
