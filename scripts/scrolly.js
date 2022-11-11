@@ -1,3 +1,11 @@
+// window.onload = function () {
+//     window.onscroll = function () {
+
+//         console.log("hello world");
+
+
+//     };
+//   };
 // Variables
 
 const hamburger = document.querySelector(".hamburger");
@@ -25,13 +33,6 @@ const tech_id = document.querySelector("#tech-stack");
 const skills_id = document.querySelector("#skills");
 const projects_id = document.querySelector("#projects");
 const contact_id = document.querySelector("#contact");
-
-
-
-window.onload = function () {
-    loadProject();
-    activeTabScroll();
-}
 
 
 hamburger.addEventListener("click", () => { hamburgerToggle(); })
@@ -89,7 +90,7 @@ contact.addEventListener("click", () => {
 //Standard Menu Methods
 
 function homeClick() {
-    // window.location.reload();
+    window.location.reload();
     home.classList.toggle("is-active");
 
     if (home_id.classList.contains("non-vis")) {
@@ -247,7 +248,6 @@ function techStackClick() {
 }
 
 function skillsClick() {
-    // window.location.reload();
     skills.classList.toggle("is-active");
 
     if (skills_id.classList.contains("non-vis")) {
@@ -748,7 +748,6 @@ function hamburgerToggle() {
 //Skill Tab Methods
 
 function displayPercentage() {
-
     displayPercentageAccountability();
     displayPercentageCreativity();
     displayPercentageCriticalThinking();
@@ -875,100 +874,3 @@ function print() {
     console.log(contact_id.classList);
     console.log(about_me_id.classList);
 }
-
-
-//Project Methods
-function loadProject() {
-
-    $(function () {
-        $('.carousel-item').eq(0).addClass('active');
-        var total = $('.carousel-item').length;
-        var current = 0;
-        $('#moveRight').on('click', function () {
-            var next = current;
-            current = current + 1;
-            setSlide(next, current);
-            console.log("heelo world");
-        });
-        $('#moveLeft').on('click', function () {
-            var prev = current;
-            current = current - 1;
-            setSlide(prev, current);
-            console.log("heelo world");
-        });
-        function setSlide(prev, next) {
-            var slide = current;
-            if (next > total - 1) {
-                slide = 0;
-                current = 0;
-            }
-            if (next < 0) {
-                slide = total - 1;
-                current = total - 1;
-            }
-            $('.carousel-item').eq(prev).removeClass('active');
-            $('.carousel-item').eq(slide).addClass('active');
-            setTimeout(function () {
-
-            }, 800);
-
-
-
-            console.log('current ' + current);
-            console.log('prev ' + prev);
-
-            if (current == prev) {
-                alert("No More Projects Available ...");
-            }
-
-        }
-    });
-}
-
-
-//source stack overflow
-function activeTabScroll() {
-
-
-    $(document).ready(function () {
-        $(document).on("scroll", onScroll);
-
-        //smoothscroll
-        $('a[href^="#"]').on('click', function (e) {
-            e.preventDefault();
-            $(document).off("scroll");
-
-            $('a').each(function () {
-                $(this).removeClass('is-active');
-            })
-            $(this).addClass('is-active');
-
-            var target = this.hash,
-                menu = target;
-            $target = $(target);
-            $('html, body').stop().animate({
-                'scrollTop': $target.offset().top + 2
-            }, 500, 'swing', function () {
-                window.location.hash = target;
-                $(document).on("scroll", onScroll);
-            });
-        });
-    });
-
-    function onScroll(event) {
-        var scrollPos = $(document).scrollTop();
-        $('.menu a').each(function () {
-            console.log("hello");
-            var currLink = $(this);
-            var refElement = $(currLink.attr("href"));
-            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-                $('.menu ul li a').removeClass("is-active");
-                currLink.addClass("is-active");
-            }
-            else {
-                currLink.removeClass("is-active");
-            }
-        });
-    }
-}
-
