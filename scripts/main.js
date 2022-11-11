@@ -31,6 +31,7 @@ const contact_id = document.querySelector("#contact");
 window.onload = function () {
     loadProject();
     activeTabScroll();
+    displayPercentage();
 }
 
 
@@ -297,7 +298,7 @@ function skillsClick() {
         contact_id.classList.toggle("vis");
     }
 
-    displayPercentage();
+    // displayPercentage();
     print();
 }
 
@@ -624,7 +625,7 @@ function skillsClickMobile() {
     }
 
     hamburgerToggle();
-    displayPercentage();
+    // displayPercentage();
     print();
 }
 
