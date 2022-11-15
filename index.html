@@ -8,7 +8,7 @@
   <title>Dipesh Singh : Full Stack Web Developer</title>
 
   <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/project.css">
+  <!-- <link rel="stylesheet" href="styles/project.css"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -19,7 +19,7 @@
 <body>
   <header>
     <nav>
-      <h1>
+      <h1 class="logo">
         <span>D</span><span>ipesh</span>
         <span>S</span><span>ingh</span>
       </h1>
@@ -152,9 +152,9 @@
           <h1>Tech Stack</h1>
           <div class="stack-images">
             <img src="https://img.icons8.com/color/96/000000/html-5--v1.png" alt="HTML-5">
+            <img src="https://img.icons8.com/fluency/96/null/visual-studio-code-2019.png" alt="VS Code"/>
             <img src="https://img.icons8.com/color/96/000000/css3.png" alt="CSS-3">
             <img src="https://img.icons8.com/color/96/000000/javascript--v1.png" alt="Java Script">
-             <img src="https://img.icons8.com/fluency/96/null/visual-studio-code-2019.png" alt="VS Code"/>
             <img src="https://img.icons8.com/color/96/000000/java-coffee-cup-logo--v1.png" alt="JAVA">
             <img src="https://img.icons8.com/color/96/000000/mysql-logo.png" alt="">
             <img class="svg" src="/images/svg/spring.svg" alt="">
@@ -260,110 +260,70 @@
     </div>
 
     <div id="projects">
-
-
       <h1>My Projects</h1>
-      <div class="carousel">
-
-
-        <div class="carousel__nav">
-          <span id="moveLeft" class="carousel__arrow">
-            <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
-            </svg>
-          </span>
-          <span id="moveRight" class="carousel__arrow">
-            <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
-              <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
-            </svg>
-          </span>
-        </div>
-
-        <div class="carousel-item carousel-item--1">
-          <div class="carousel-item__image"></div>
-          <div class="carousel-item__info">
-            <div class="carousel-item__container">
-
-              <h1 class="carousel-item__title">Coschedule Clone</h1>
-              <h2 class="carousel-item__subtitle"> Tech Stack : HTML/CSS, JavaScript, GitHub </h2>
-              <p class="carousel-item__description">
-                This is a Team project. In this project I have managed to create two pages one is Coschedule Guide and
-                10x Marketing Formula page.
+      <div>
+        <div class="row">
+          <div class="col">
+            <img src="images/projects/coschedule.png" alt="coschedule">
+            <div class="details">
+              <h3>Name : <span>Coschedule Clone</span></h3>
+              <h4>Tech-Stack : <span>HTML,CSS,JavaScript</span></h4>
+              <p>
+                We have created a clone of CoSchedule, which is an online Social media service provider Company, Through this website, you can learn how to handle your social media account more efficiently and also provide many other services. On this website, we created a home page, Social media support page, Stats page, and Payment Getaway page and you can use these pages after you Login into this website. You can easily buy services through this website 
               </p>
-              <a href="https://github.com/akaushik509/WEB101_Project#coschedule_clone" class="carousel-item__btn"> <i
-                  class="fa-brands fa-github fa-3x"></i></a>
-              <a href="https://gorgeous-pie-7444ca.netlify.app" class="carousel-item__btn"><i
-                  class="fa-solid fa-link fa-3x"></i></a>
+              <div>
+                <a href="">
+                <i class="fa-brands fa-github fa-2x"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-link fa-2x"></i>
+              </a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <img src="images/projects/personalportfolio.png" alt="coschedule">
+            <div class="details">
+              <h3>Name : <span>
 
+                Personal Portfolio </span></h3>
+              <h4>Tech-Stack : <span>HTML,CSS,JavaScript</span></h4>
+              <p>
+                This is an individual and personal project. A portfolio project suitable for Designer and Developers. This is a personal portfolio with minimalist design and very simple animation.
+              </p>
+              <div>
+                <a href="https://github.com/dipeshsingh253/dipeshsingh253.github.io">
+                <i class="fa-brands fa-github fa-2x"></i>
+              </a>
+              <a href="https://dipeshsingh253.github.io/">
+                <i class="fa fa-link fa-2x"></i>
+              </a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <img src="images/projects/mgnrega.png" alt="coschedule">
+            <div class="details">
+              <h3>Name : <span>MGNREGA Management</span></h3>
+              <h4>Tech-Stack : <span>HTML,CSS,JavaScript</span></h4>
+              <p>
+                MNREGA(The Mahatma Gandhi National Rural Employment Guarantee Act ) is a scheme by which unskilled people of rural India are guaranteed to have 100 days of paid work. Main objective of this project is to manage employments offered through this scheme. You can see more info on github.
+              </p>
+              <div>
+                <a href="https://github.com/dipeshsingh253/excellent-noise-5475">
+                <i class="fa-brands fa-github fa-2x"></i>
+              </a>
+              <a href="https://replit.com/@DipeshSingh6/excellent-noise-5475#src/com/mgnrega/driver/Main.java">
+                <i class="fa fa-link fa-2x"></i>
+              </a>
+              </div>
             </div>
           </div>
         </div>
-
-        <!-- Add More Projects Here -->
-
-        <div class="carousel-item carousel-item--2">
-          <div class="carousel-item__image"></div>
-          <div class="carousel-item__info">
-            <div class="carousel-item__container">
-
-              <h1 class="carousel-item__title">MGNREGA Management</h1>
-              <h2 class="carousel-item__subtitle">Tech Stack : Java, GitHub, IntelijIdea IDE</h2>
-              <p class="carousel-item__description">MNREGA(The Mahatma Gandhi National Rural Employment Guarantee Act )
-                is a scheme by which unskilled people of rural India are guaranteed to have 100 days of paid work. Main
-                objective of this project is to manage employments offered through this scheme. You can see more info on
-                github.</p>
-              <a href="https://github.com/dipeshsingh253/excellent-noise-5475" class="carousel-item__btn"> <i
-                  class="fa-brands fa-github fa-3x"></i></a>
-              <a href="https://replit.com/@DipeshSingh6/excellent-noise-5475#src/com/mgnrega/driver/Main.java"
-                class="carousel-item__btn"><i class="fa-solid fa-link fa-3x"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item carousel-item--3">
-          <div class="carousel-item__image"></div>
-          <div class="carousel-item__info">
-            <div class="carousel-item__container">
-              <h1 class="carousel-item__title">Personal Portfolio </h1>
-              <h2 class="carousel-item__subtitle">Tech Stack : HTML/CSS, JavaScript, nodeJS, npm, GitHub </h2>
-              <p class="carousel-item__description">This is an individual and personal project. A portfolio project
-                suitable for Designer and Developers. This is a personal portfolio with minimalist design and very
-                simple animation.</p>
-              <a href="https://github.com/dipeshsingh253/dipeshsingh253.github.io" class="carousel-item__btn"><i
-                  class="fa-brands fa-github fa-3x"></i></a>
-              <a href="https://dipeshsingh253.github.io/" class="carousel-item__btn"><i
-                  class="fa-solid fa-link fa-3x"></i></a>
-            </div>
-          </div>
-        </div>
-        <!--
-        <div class="carousel-item carousel-item--4">
-          <div class="carousel-item__image"></div>
-          <div class="carousel-item__info">
-            <div class="carousel-item__container">
-              <h2 class="carousel-item__subtitle">Beach </h2>
-              <h1 class="carousel-item__title">The beach </h1>
-              <p class="carousel-item__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam.</p>
-              <a href="#" class="carousel-item__btn">Explore the beach</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item carousel-item--5">
-          <div class="carousel-item__image"></div>
-          <div class="carousel-item__info">
-            <div class="carousel-item__container">
-              <h2 class="carousel-item__subtitle">The white building </h2>
-              <h1 class="carousel-item__title">White building</h1>
-              <p class="carousel-item__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam.</p>
-              <a href="#" class="carousel-item__btn">Read the article</a>
-            </div>
-          </div>
-        </div> -->
-
       </div>
+
+    
+
     </div>
 
     <div id="contact">
