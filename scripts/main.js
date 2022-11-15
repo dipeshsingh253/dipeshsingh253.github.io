@@ -17,7 +17,6 @@ const skills_mobile = document.querySelector(".mobile-menu .skills");
 const projects_mobile = document.querySelector(".mobile-menu .projects");
 const contact_mobile = document.querySelector(".mobile-menu .contact");
 
-
 // Variables for Desktop Top Navigation Bar (Tabs)
 const home_id = document.querySelector("#home");
 const about_me_id = document.querySelector("#about-me");
@@ -26,797 +25,786 @@ const skills_id = document.querySelector("#skills");
 const projects_id = document.querySelector("#projects");
 const contact_id = document.querySelector("#contact");
 
+const btns = document.getElementsByClassName("resume");
 
-
-window.onload = function () {
-    loadProject();
-    activeTabScroll();
-    displayPercentage();
+function openResume() {
+  for (let i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", () => {
+      window.open(
+        "https://drive.google.com/file/d/14RAXZV6gs-0wg2ZfMfqDbH-EHHMlFMdC/view?usp=sharing"
+      ,"blank");
+    });
+  }
 }
 
+window.onload = function () {
+  loadProject();
+  activeTabScroll();
+  displayPercentage();
+  openResume();
+};
 
-hamburger.addEventListener("click", () => { hamburgerToggle(); })
+hamburger.addEventListener("click", () => {
+  hamburgerToggle();
+});
 
 home_mobile.addEventListener("click", () => {
-    homeClickMobile();
+  homeClickMobile();
 });
 
 about_me_mobile.addEventListener("click", () => {
-    aboutMeClickMobile();
+  aboutMeClickMobile();
 });
 
 tech_mobile.addEventListener("click", () => {
-    techStackClickMobile();
+  techStackClickMobile();
 });
 
 skills_mobile.addEventListener("click", () => {
-    skillsClickMobile();
+  skillsClickMobile();
 });
 
 projects_mobile.addEventListener("click", () => {
-    projectsClickMobile();
+  projectsClickMobile();
 });
 
 contact_mobile.addEventListener("click", () => {
-    contactsClickMobile();
+  contactsClickMobile();
 });
 
 home.addEventListener("click", () => {
-
-    homeClick();
-
+  homeClick();
 });
 
 about_me.addEventListener("click", () => {
-    aboutMeClick();
+  aboutMeClick();
 });
 
 tech.addEventListener("click", () => {
-    techStackClick();
+  techStackClick();
 });
 
 skills.addEventListener("click", () => {
-    skillsClick();
+  skillsClick();
 });
 
 projects.addEventListener("click", () => {
-    projectsClick();
+  projectsClick();
 });
 
 contact.addEventListener("click", () => {
-    contactClick();
+  contactClick();
 });
 
 //Standard Menu Methods
 
 function homeClick() {
-    // window.location.reload();
-    home.classList.toggle("is-active");
+  // window.location.reload();
+  home.classList.toggle("is-active");
 
-    if (home_id.classList.contains("non-vis")) {
-        home_id.classList.toggle("non-vis");
-    }
+  if (home_id.classList.contains("non-vis")) {
+    home_id.classList.toggle("non-vis");
+  }
 
-    home_id.classList.toggle("vis");
+  home_id.classList.toggle("vis");
 
-    if (projects.classList.contains("is-active")) {
-        projects.classList.toggle("is-active");
-    }
+  if (projects.classList.contains("is-active")) {
+    projects.classList.toggle("is-active");
+  }
 
-    if (about_me.classList.contains("is-active")) {
-        about_me.classList.toggle("is-active");
-    }
+  if (about_me.classList.contains("is-active")) {
+    about_me.classList.toggle("is-active");
+  }
 
-    if (tech.classList.contains("is-active")) {
-        tech.classList.toggle("is-active");
-    }
+  if (tech.classList.contains("is-active")) {
+    tech.classList.toggle("is-active");
+  }
 
-    if (skills.classList.contains("is-active")) {
-        skills.classList.toggle("is-active");
-    }
+  if (skills.classList.contains("is-active")) {
+    skills.classList.toggle("is-active");
+  }
 
-    if (contact.classList.contains("is-active")) {
-        contact.classList.toggle("is-active");
-    }
+  if (contact.classList.contains("is-active")) {
+    contact.classList.toggle("is-active");
+  }
 
-    if (about_me_id.classList.contains("vis")) {
-        about_me_id.classList.toggle("vis");
-    }
+  if (about_me_id.classList.contains("vis")) {
+    about_me_id.classList.toggle("vis");
+  }
 
-    if (tech_id.classList.contains("vis")) {
-        tech_id.classList.toggle("vis");
-    }
+  if (tech_id.classList.contains("vis")) {
+    tech_id.classList.toggle("vis");
+  }
 
-    if (skills_id.classList.contains("vis")) {
-        skills_id.classList.toggle("vis");
-    }
+  if (skills_id.classList.contains("vis")) {
+    skills_id.classList.toggle("vis");
+  }
 
-    if (projects_id.classList.contains("vis")) {
-        projects_id.classList.toggle("vis");
-    }
+  if (projects_id.classList.contains("vis")) {
+    projects_id.classList.toggle("vis");
+  }
 
-    if (contact_id.classList.contains("vis")) {
-        contact_id.classList.toggle("vis");
-    }
+  if (contact_id.classList.contains("vis")) {
+    contact_id.classList.toggle("vis");
+  }
 
-    print();
+  print();
 }
 
 function aboutMeClick() {
-    about_me.classList.toggle("is-active");
+  about_me.classList.toggle("is-active");
 
-    if (about_me_id.classList.contains("non-vis")) {
-        about_me_id.classList.toggle("non-vis");
-    }
+  if (about_me_id.classList.contains("non-vis")) {
+    about_me_id.classList.toggle("non-vis");
+  }
 
-    about_me_id.classList.toggle("vis");
+  about_me_id.classList.toggle("vis");
 
-    if (home.classList.contains("is-active")) {
-        home.classList.toggle("is-active");
-    }
+  if (home.classList.contains("is-active")) {
+    home.classList.toggle("is-active");
+  }
 
-    if (tech.classList.contains("is-active")) {
-        tech.classList.toggle("is-active");
-    }
+  if (tech.classList.contains("is-active")) {
+    tech.classList.toggle("is-active");
+  }
 
-    if (skills.classList.contains("is-active")) {
-        skills.classList.toggle("is-active");
-    }
+  if (skills.classList.contains("is-active")) {
+    skills.classList.toggle("is-active");
+  }
 
-    if (projects.classList.contains("is-active")) {
-        projects.classList.toggle("is-active");
-    }
+  if (projects.classList.contains("is-active")) {
+    projects.classList.toggle("is-active");
+  }
 
-    if (contact.classList.contains("is-active")) {
-        contact.classList.toggle("is-active");
-    }
+  if (contact.classList.contains("is-active")) {
+    contact.classList.toggle("is-active");
+  }
 
+  if (home_id.classList.contains("vis")) {
+    home_id.classList.toggle("vis");
+  }
 
-    if (home_id.classList.contains("vis")) {
-        home_id.classList.toggle("vis");
-    }
+  if (tech_id.classList.contains("vis")) {
+    tech_id.classList.toggle("vis");
+  }
 
-    if (tech_id.classList.contains("vis")) {
-        tech_id.classList.toggle("vis");
-    }
+  if (skills_id.classList.contains("vis")) {
+    skills_id.classList.toggle("vis");
+  }
 
-    if (skills_id.classList.contains("vis")) {
-        skills_id.classList.toggle("vis");
-    }
+  if (projects_id.classList.contains("vis")) {
+    projects_id.classList.toggle("vis");
+  }
 
-    if (projects_id.classList.contains("vis")) {
-        projects_id.classList.toggle("vis");
-    }
+  if (contact_id.classList.contains("vis")) {
+    contact_id.classList.toggle("vis");
+  }
 
-    if (contact_id.classList.contains("vis")) {
-        contact_id.classList.toggle("vis");
-    }
-
-    print();
+  print();
 }
 
 function techStackClick() {
-    tech.classList.toggle("is-active");
+  tech.classList.toggle("is-active");
 
-    if (tech_id.classList.contains("non-vis")) {
-        tech_id.classList.toggle("non-vis");
-    }
+  if (tech_id.classList.contains("non-vis")) {
+    tech_id.classList.toggle("non-vis");
+  }
 
-    tech_id.classList.toggle("vis");
+  tech_id.classList.toggle("vis");
 
-    if (home.classList.contains("is-active")) {
-        home.classList.toggle("is-active");
-    }
+  if (home.classList.contains("is-active")) {
+    home.classList.toggle("is-active");
+  }
 
-    if (about_me.classList.contains("is-active")) {
-        about_me.classList.toggle("is-active");
-    }
+  if (about_me.classList.contains("is-active")) {
+    about_me.classList.toggle("is-active");
+  }
 
-    if (skills.classList.contains("is-active")) {
-        skills.classList.toggle("is-active");
-    }
+  if (skills.classList.contains("is-active")) {
+    skills.classList.toggle("is-active");
+  }
 
-    if (projects.classList.contains("is-active")) {
-        projects.classList.toggle("is-active");
-    }
+  if (projects.classList.contains("is-active")) {
+    projects.classList.toggle("is-active");
+  }
 
-    if (contact.classList.contains("is-active")) {
-        contact.classList.toggle("is-active");
-    }
+  if (contact.classList.contains("is-active")) {
+    contact.classList.toggle("is-active");
+  }
 
+  if (home_id.classList.contains("vis")) {
+    home_id.classList.toggle("vis");
+  }
 
-    if (home_id.classList.contains("vis")) {
-        home_id.classList.toggle("vis");
-    }
+  if (about_me_id.classList.contains("vis")) {
+    about_me_id.classList.toggle("vis");
+  }
 
-    if (about_me_id.classList.contains("vis")) {
-        about_me_id.classList.toggle("vis");
-    }
+  if (skills_id.classList.contains("vis")) {
+    skills_id.classList.toggle("vis");
+  }
 
-    if (skills_id.classList.contains("vis")) {
-        skills_id.classList.toggle("vis");
-    }
+  if (projects_id.classList.contains("vis")) {
+    projects_id.classList.toggle("vis");
+  }
 
-    if (projects_id.classList.contains("vis")) {
-        projects_id.classList.toggle("vis");
-    }
-
-    if (contact_id.classList.contains("vis")) {
-        contact_id.classList.toggle("vis");
-    }
-    print();
+  if (contact_id.classList.contains("vis")) {
+    contact_id.classList.toggle("vis");
+  }
+  print();
 }
 
 function skillsClick() {
-    // window.location.reload();
-    skills.classList.toggle("is-active");
+  // window.location.reload();
+  skills.classList.toggle("is-active");
 
-    if (skills_id.classList.contains("non-vis")) {
-        skills_id.classList.toggle("non-vis");
-    }
+  if (skills_id.classList.contains("non-vis")) {
+    skills_id.classList.toggle("non-vis");
+  }
 
-    skills_id.classList.toggle("vis");
+  skills_id.classList.toggle("vis");
 
-    if (home.classList.contains("is-active")) {
-        home.classList.toggle("is-active");
-    }
+  if (home.classList.contains("is-active")) {
+    home.classList.toggle("is-active");
+  }
 
-    if (about_me.classList.contains("is-active")) {
-        about_me.classList.toggle("is-active");
-    }
+  if (about_me.classList.contains("is-active")) {
+    about_me.classList.toggle("is-active");
+  }
 
-    if (tech.classList.contains("is-active")) {
-        tech.classList.toggle("is-active");
-    }
+  if (tech.classList.contains("is-active")) {
+    tech.classList.toggle("is-active");
+  }
 
-    if (projects.classList.contains("is-active")) {
-        projects.classList.toggle("is-active");
-    }
+  if (projects.classList.contains("is-active")) {
+    projects.classList.toggle("is-active");
+  }
 
-    if (contact.classList.contains("is-active")) {
-        contact.classList.toggle("is-active");
-    }
+  if (contact.classList.contains("is-active")) {
+    contact.classList.toggle("is-active");
+  }
 
+  if (home_id.classList.contains("vis")) {
+    home_id.classList.toggle("vis");
+  }
 
-    if (home_id.classList.contains("vis")) {
-        home_id.classList.toggle("vis");
-    }
+  if (tech_id.classList.contains("vis")) {
+    tech_id.classList.toggle("vis");
+  }
 
-    if (tech_id.classList.contains("vis")) {
-        tech_id.classList.toggle("vis");
-    }
+  if (about_me_id.classList.contains("vis")) {
+    about_me_id.classList.toggle("vis");
+  }
 
-    if (about_me_id.classList.contains("vis")) {
-        about_me_id.classList.toggle("vis");
-    }
+  if (projects_id.classList.contains("vis")) {
+    projects_id.classList.toggle("vis");
+  }
 
-    if (projects_id.classList.contains("vis")) {
-        projects_id.classList.toggle("vis");
-    }
+  if (contact_id.classList.contains("vis")) {
+    contact_id.classList.toggle("vis");
+  }
 
-    if (contact_id.classList.contains("vis")) {
-        contact_id.classList.toggle("vis");
-    }
-
-    // displayPercentage();
-    print();
+  // displayPercentage();
+  print();
 }
 
 function projectsClick() {
-    projects.classList.toggle("is-active");
+  projects.classList.toggle("is-active");
 
-    if (projects_id.classList.contains("non-vis")) {
-        projects_id.classList.toggle("non-vis");
-    }
+  if (projects_id.classList.contains("non-vis")) {
+    projects_id.classList.toggle("non-vis");
+  }
 
-    projects_id.classList.toggle("vis");
+  projects_id.classList.toggle("vis");
 
-    if (home.classList.contains("is-active")) {
-        home.classList.toggle("is-active");
-    }
+  if (home.classList.contains("is-active")) {
+    home.classList.toggle("is-active");
+  }
 
-    if (about_me.classList.contains("is-active")) {
-        about_me.classList.toggle("is-active");
-    }
+  if (about_me.classList.contains("is-active")) {
+    about_me.classList.toggle("is-active");
+  }
 
-    if (tech.classList.contains("is-active")) {
-        tech.classList.toggle("is-active");
-    }
+  if (tech.classList.contains("is-active")) {
+    tech.classList.toggle("is-active");
+  }
 
-    if (skills.classList.contains("is-active")) {
-        skills.classList.toggle("is-active");
-    }
+  if (skills.classList.contains("is-active")) {
+    skills.classList.toggle("is-active");
+  }
 
-    if (contact.classList.contains("is-active")) {
-        contact.classList.toggle("is-active");
-    }
+  if (contact.classList.contains("is-active")) {
+    contact.classList.toggle("is-active");
+  }
 
+  if (home_id.classList.contains("vis")) {
+    home_id.classList.toggle("vis");
+  }
 
-    if (home_id.classList.contains("vis")) {
-        home_id.classList.toggle("vis");
-    }
+  if (tech_id.classList.contains("vis")) {
+    tech_id.classList.toggle("vis");
+  }
 
-    if (tech_id.classList.contains("vis")) {
-        tech_id.classList.toggle("vis");
-    }
+  if (skills_id.classList.contains("vis")) {
+    skills_id.classList.toggle("vis");
+  }
 
-    if (skills_id.classList.contains("vis")) {
-        skills_id.classList.toggle("vis");
-    }
+  if (about_me_id.classList.contains("vis")) {
+    about_me_id.classList.toggle("vis");
+  }
 
-    if (about_me_id.classList.contains("vis")) {
-        about_me_id.classList.toggle("vis");
-    }
-
-    if (contact_id.classList.contains("vis")) {
-        contact_id.classList.toggle("vis");
-    }
-    loadProject();
-    print();
+  if (contact_id.classList.contains("vis")) {
+    contact_id.classList.toggle("vis");
+  }
+  loadProject();
+  print();
 }
 
 function contactClick() {
-    contact.classList.toggle("is-active");
+  contact.classList.toggle("is-active");
 
+  if (contact_id.classList.contains("non-vis")) {
+    contact_id.classList.toggle("non-vis");
+  }
 
-    if (contact_id.classList.contains("non-vis")) {
-        contact_id.classList.toggle("non-vis");
-    }
+  contact_id.classList.toggle("vis");
 
-    contact_id.classList.toggle("vis");
+  if (home.classList.contains("is-active")) {
+    home.classList.toggle("is-active");
+  }
 
-    if (home.classList.contains("is-active")) {
-        home.classList.toggle("is-active");
-    }
+  if (about_me.classList.contains("is-active")) {
+    about_me.classList.toggle("is-active");
+  }
 
-    if (about_me.classList.contains("is-active")) {
-        about_me.classList.toggle("is-active");
-    }
+  if (tech.classList.contains("is-active")) {
+    tech.classList.toggle("is-active");
+  }
 
-    if (tech.classList.contains("is-active")) {
-        tech.classList.toggle("is-active");
-    }
+  if (skills.classList.contains("is-active")) {
+    skills.classList.toggle("is-active");
+  }
 
-    if (skills.classList.contains("is-active")) {
-        skills.classList.toggle("is-active");
-    }
+  if (projects.classList.contains("is-active")) {
+    projects.classList.toggle("is-active");
+  }
 
-    if (projects.classList.contains("is-active")) {
-        projects.classList.toggle("is-active");
-    }
+  if (home_id.classList.contains("vis")) {
+    home_id.classList.toggle("vis");
+  }
 
-    if (home_id.classList.contains("vis")) {
-        home_id.classList.toggle("vis");
-    }
+  if (tech_id.classList.contains("vis")) {
+    tech_id.classList.toggle("vis");
+  }
 
-    if (tech_id.classList.contains("vis")) {
-        tech_id.classList.toggle("vis");
-    }
+  if (skills_id.classList.contains("vis")) {
+    skills_id.classList.toggle("vis");
+  }
 
-    if (skills_id.classList.contains("vis")) {
-        skills_id.classList.toggle("vis");
-    }
+  if (projects_id.classList.contains("vis")) {
+    projects_id.classList.toggle("vis");
+  }
 
-    if (projects_id.classList.contains("vis")) {
-        projects_id.classList.toggle("vis");
-    }
-
-    if (about_me_id.classList.contains("vis")) {
-        about_me_id.classList.toggle("vis");
-    }
-    print();
+  if (about_me_id.classList.contains("vis")) {
+    about_me_id.classList.toggle("vis");
+  }
+  print();
 }
 
-
-//Mobile Menu Methods 
+//Mobile Menu Methods
 
 function homeClickMobile() {
-    window.location.reload();
-    home_mobile.classList.toggle("is-active");
+  window.location.reload();
+  home_mobile.classList.toggle("is-active");
 
-    if (home_id.classList.contains("non-vis")) {
-        home_id.classList.toggle("non-vis");
-    }
+  if (home_id.classList.contains("non-vis")) {
+    home_id.classList.toggle("non-vis");
+  }
 
-    home_id.classList.toggle("vis");
+  home_id.classList.toggle("vis");
 
-    if (about_me_mobile.classList.contains("is-active")) {
-        about_me_mobile.classList.toggle("is-active");
-    }
+  if (about_me_mobile.classList.contains("is-active")) {
+    about_me_mobile.classList.toggle("is-active");
+  }
 
-    if (tech_mobile.classList.contains("is-active")) {
-        tech_mobile.classList.toggle("is-active");
-    }
+  if (tech_mobile.classList.contains("is-active")) {
+    tech_mobile.classList.toggle("is-active");
+  }
 
-    if (skills_mobile.classList.contains("is-active")) {
-        skills_mobile.classList.toggle("is-active");
-    }
+  if (skills_mobile.classList.contains("is-active")) {
+    skills_mobile.classList.toggle("is-active");
+  }
 
-    if (projects_mobile.classList.contains("is-active")) {
-        projects_mobile.classList.toggle("is-active");
-    }
+  if (projects_mobile.classList.contains("is-active")) {
+    projects_mobile.classList.toggle("is-active");
+  }
 
-    if (contact_mobile.classList.contains("is-active")) {
-        contact_mobile.classList.toggle("is-active");
-    }
+  if (contact_mobile.classList.contains("is-active")) {
+    contact_mobile.classList.toggle("is-active");
+  }
 
+  if (about_me_id.classList.contains("vis")) {
+    about_me_id.classList.toggle("vis");
+  }
 
-    if (about_me_id.classList.contains("vis")) {
-        about_me_id.classList.toggle("vis");
-    }
+  if (tech_id.classList.contains("vis")) {
+    tech_id.classList.toggle("vis");
+  }
 
-    if (tech_id.classList.contains("vis")) {
-        tech_id.classList.toggle("vis");
-    }
+  if (skills_id.classList.contains("vis")) {
+    skills_id.classList.toggle("vis");
+  }
 
-    if (skills_id.classList.contains("vis")) {
-        skills_id.classList.toggle("vis");
-    }
+  if (projects_id.classList.contains("vis")) {
+    projects_id.classList.toggle("vis");
+  }
 
-    if (projects_id.classList.contains("vis")) {
-        projects_id.classList.toggle("vis");
-    }
+  if (contact_id.classList.contains("vis")) {
+    contact_id.classList.toggle("vis");
+  }
 
-    if (contact_id.classList.contains("vis")) {
-        contact_id.classList.toggle("vis");
-    }
+  hamburgerToggle();
 
-    hamburgerToggle();
-
-    print();
+  print();
 }
 
 function aboutMeClickMobile() {
-    about_me_mobile.classList.toggle("is-active");
+  about_me_mobile.classList.toggle("is-active");
 
-    if (about_me_id.classList.contains("non-vis")) {
-        about_me_id.classList.toggle("non-vis");
-    }
+  if (about_me_id.classList.contains("non-vis")) {
+    about_me_id.classList.toggle("non-vis");
+  }
 
-    about_me_id.classList.toggle("vis");
+  about_me_id.classList.toggle("vis");
 
-    if (home_mobile.classList.contains("is-active")) {
-        home_mobile.classList.toggle("is-active");
-    }
+  if (home_mobile.classList.contains("is-active")) {
+    home_mobile.classList.toggle("is-active");
+  }
 
-    if (tech_mobile.classList.contains("is-active")) {
-        tech_mobile.classList.toggle("is-active");
-    }
+  if (tech_mobile.classList.contains("is-active")) {
+    tech_mobile.classList.toggle("is-active");
+  }
 
-    if (skills_mobile.classList.contains("is-active")) {
-        skills_mobile.classList.toggle("is-active");
-    }
+  if (skills_mobile.classList.contains("is-active")) {
+    skills_mobile.classList.toggle("is-active");
+  }
 
-    if (projects_mobile.classList.contains("is-active")) {
-        projects_mobile.classList.toggle("is-active");
-    }
+  if (projects_mobile.classList.contains("is-active")) {
+    projects_mobile.classList.toggle("is-active");
+  }
 
-    if (contact_mobile.classList.contains("is-active")) {
-        contact_mobile.classList.toggle("is-active");
-    }
+  if (contact_mobile.classList.contains("is-active")) {
+    contact_mobile.classList.toggle("is-active");
+  }
 
+  if (home_id.classList.contains("vis")) {
+    home_id.classList.toggle("vis");
+  }
 
-    if (home_id.classList.contains("vis")) {
-        home_id.classList.toggle("vis");
-    }
+  if (tech_id.classList.contains("vis")) {
+    tech_id.classList.toggle("vis");
+  }
 
-    if (tech_id.classList.contains("vis")) {
-        tech_id.classList.toggle("vis");
-    }
+  if (skills_id.classList.contains("vis")) {
+    skills_id.classList.toggle("vis");
+  }
 
-    if (skills_id.classList.contains("vis")) {
-        skills_id.classList.toggle("vis");
-    }
+  if (projects_id.classList.contains("vis")) {
+    projects_id.classList.toggle("vis");
+  }
 
-    if (projects_id.classList.contains("vis")) {
-        projects_id.classList.toggle("vis");
-    }
+  if (contact_id.classList.contains("vis")) {
+    contact_id.classList.toggle("vis");
+  }
 
-    if (contact_id.classList.contains("vis")) {
-        contact_id.classList.toggle("vis");
-    }
+  hamburgerToggle();
 
-    hamburgerToggle();
-
-    print();
+  print();
 }
 
 function techStackClickMobile() {
-    tech_mobile.classList.toggle("is-active");
-    if (tech_id.classList.contains("non-vis")) {
-        tech_id.classList.toggle("non-vis");
-    }
+  tech_mobile.classList.toggle("is-active");
+  if (tech_id.classList.contains("non-vis")) {
+    tech_id.classList.toggle("non-vis");
+  }
 
-    tech_id.classList.toggle("vis");
+  tech_id.classList.toggle("vis");
 
-    if (about_me_mobile.classList.contains("is-active")) {
-        about_me_mobile.classList.toggle("is-active");
-    }
+  if (about_me_mobile.classList.contains("is-active")) {
+    about_me_mobile.classList.toggle("is-active");
+  }
 
-    if (home_mobile.classList.contains("is-active")) {
-        home_mobile.classList.toggle("is-active");
-    }
+  if (home_mobile.classList.contains("is-active")) {
+    home_mobile.classList.toggle("is-active");
+  }
 
-    if (skills_mobile.classList.contains("is-active")) {
-        skills_mobile.classList.toggle("is-active");
-    }
+  if (skills_mobile.classList.contains("is-active")) {
+    skills_mobile.classList.toggle("is-active");
+  }
 
-    if (projects_mobile.classList.contains("is-active")) {
-        projects_mobile.classList.toggle("is-active");
-    }
+  if (projects_mobile.classList.contains("is-active")) {
+    projects_mobile.classList.toggle("is-active");
+  }
 
-    if (contact_mobile.classList.contains("is-active")) {
-        contact_mobile.classList.toggle("is-active");
-    }
+  if (contact_mobile.classList.contains("is-active")) {
+    contact_mobile.classList.toggle("is-active");
+  }
 
+  if (home_id.classList.contains("vis")) {
+    home_id.classList.toggle("vis");
+  }
 
-    if (home_id.classList.contains("vis")) {
-        home_id.classList.toggle("vis");
-    }
+  if (about_me_id.classList.contains("vis")) {
+    about_me_id.classList.toggle("vis");
+  }
 
-    if (about_me_id.classList.contains("vis")) {
-        about_me_id.classList.toggle("vis");
-    }
+  if (skills_id.classList.contains("vis")) {
+    skills_id.classList.toggle("vis");
+  }
 
-    if (skills_id.classList.contains("vis")) {
-        skills_id.classList.toggle("vis");
-    }
+  if (projects_id.classList.contains("vis")) {
+    projects_id.classList.toggle("vis");
+  }
 
-    if (projects_id.classList.contains("vis")) {
-        projects_id.classList.toggle("vis");
-    }
+  if (contact_id.classList.contains("vis")) {
+    contact_id.classList.toggle("vis");
+  }
 
-    if (contact_id.classList.contains("vis")) {
-        contact_id.classList.toggle("vis");
-    }
+  hamburgerToggle();
 
-    hamburgerToggle();
-
-    print();
+  print();
 }
 
 function skillsClickMobile() {
-    skills_mobile.classList.toggle("is-active");
+  skills_mobile.classList.toggle("is-active");
 
-    if (skills_id.classList.contains("non-vis")) {
-        skills_id.classList.toggle("non-vis");
-    }
+  if (skills_id.classList.contains("non-vis")) {
+    skills_id.classList.toggle("non-vis");
+  }
 
-    skills_id.classList.toggle("vis");
-    if (about_me_mobile.classList.contains("is-active")) {
-        about_me_mobile.classList.toggle("is-active");
-    }
+  skills_id.classList.toggle("vis");
+  if (about_me_mobile.classList.contains("is-active")) {
+    about_me_mobile.classList.toggle("is-active");
+  }
 
-    if (tech_mobile.classList.contains("is-active")) {
-        tech_mobile.classList.toggle("is-active");
-    }
+  if (tech_mobile.classList.contains("is-active")) {
+    tech_mobile.classList.toggle("is-active");
+  }
 
-    if (home_mobile.classList.contains("is-active")) {
-        home_mobile.classList.toggle("is-active");
-    }
+  if (home_mobile.classList.contains("is-active")) {
+    home_mobile.classList.toggle("is-active");
+  }
 
-    if (projects_mobile.classList.contains("is-active")) {
-        projects_mobile.classList.toggle("is-active");
-    }
+  if (projects_mobile.classList.contains("is-active")) {
+    projects_mobile.classList.toggle("is-active");
+  }
 
-    if (contact_mobile.classList.contains("is-active")) {
-        contact_mobile.classList.toggle("is-active");
-    }
+  if (contact_mobile.classList.contains("is-active")) {
+    contact_mobile.classList.toggle("is-active");
+  }
 
+  if (home_id.classList.contains("vis")) {
+    home_id.classList.toggle("vis");
+  }
 
-    if (home_id.classList.contains("vis")) {
-        home_id.classList.toggle("vis");
-    }
+  if (tech_id.classList.contains("vis")) {
+    tech_id.classList.toggle("vis");
+  }
 
-    if (tech_id.classList.contains("vis")) {
-        tech_id.classList.toggle("vis");
-    }
+  if (about_me_id.classList.contains("vis")) {
+    about_me_id.classList.toggle("vis");
+  }
 
-    if (about_me_id.classList.contains("vis")) {
-        about_me_id.classList.toggle("vis");
-    }
+  if (projects_id.classList.contains("vis")) {
+    projects_id.classList.toggle("vis");
+  }
 
-    if (projects_id.classList.contains("vis")) {
-        projects_id.classList.toggle("vis");
-    }
+  if (contact_id.classList.contains("vis")) {
+    contact_id.classList.toggle("vis");
+  }
 
-    if (contact_id.classList.contains("vis")) {
-        contact_id.classList.toggle("vis");
-    }
-
-    hamburgerToggle();
-    // displayPercentage();
-    print();
+  hamburgerToggle();
+  // displayPercentage();
+  print();
 }
 
 function projectsClickMobile() {
-    projects_mobile.classList.toggle("is-active");
+  projects_mobile.classList.toggle("is-active");
 
-    if (projects_id.classList.contains("non-vis")) {
-        projects_id.classList.toggle("non-vis");
-    }
+  if (projects_id.classList.contains("non-vis")) {
+    projects_id.classList.toggle("non-vis");
+  }
 
-    projects_id.classList.toggle("vis");
+  projects_id.classList.toggle("vis");
 
-    if (about_me_mobile.classList.contains("is-active")) {
-        about_me_mobile.classList.toggle("is-active");
-    }
+  if (about_me_mobile.classList.contains("is-active")) {
+    about_me_mobile.classList.toggle("is-active");
+  }
 
-    if (tech_mobile.classList.contains("is-active")) {
-        tech_mobile.classList.toggle("is-active");
-    }
+  if (tech_mobile.classList.contains("is-active")) {
+    tech_mobile.classList.toggle("is-active");
+  }
 
-    if (skills_mobile.classList.contains("is-active")) {
-        skills_mobile.classList.toggle("is-active");
-    }
+  if (skills_mobile.classList.contains("is-active")) {
+    skills_mobile.classList.toggle("is-active");
+  }
 
-    if (home_mobile.classList.contains("is-active")) {
-        home_mobile.classList.toggle("is-active");
-    }
+  if (home_mobile.classList.contains("is-active")) {
+    home_mobile.classList.toggle("is-active");
+  }
 
-    if (contact_mobile.classList.contains("is-active")) {
-        contact_mobile.classList.toggle("is-active");
-    }
+  if (contact_mobile.classList.contains("is-active")) {
+    contact_mobile.classList.toggle("is-active");
+  }
 
+  if (home_id.classList.contains("vis")) {
+    home_id.classList.toggle("vis");
+  }
 
-    if (home_id.classList.contains("vis")) {
-        home_id.classList.toggle("vis");
-    }
+  if (tech_id.classList.contains("vis")) {
+    tech_id.classList.toggle("vis");
+  }
 
-    if (tech_id.classList.contains("vis")) {
-        tech_id.classList.toggle("vis");
-    }
+  if (skills_id.classList.contains("vis")) {
+    skills_id.classList.toggle("vis");
+  }
 
-    if (skills_id.classList.contains("vis")) {
-        skills_id.classList.toggle("vis");
-    }
+  if (about_me_id.classList.contains("vis")) {
+    about_me_id.classList.toggle("vis");
+  }
 
-    if (about_me_id.classList.contains("vis")) {
-        about_me_id.classList.toggle("vis");
-    }
+  if (contact_id.classList.contains("vis")) {
+    contact_id.classList.toggle("vis");
+  }
 
-    if (contact_id.classList.contains("vis")) {
-        contact_id.classList.toggle("vis");
-    }
-
-    hamburgerToggle();
-    loadProject();
-    print();
+  hamburgerToggle();
+  loadProject();
+  print();
 }
 
 function contactsClickMobile() {
-    contact_mobile.classList.toggle("is-active");
+  contact_mobile.classList.toggle("is-active");
 
-    if (contact_id.classList.contains("non-vis")) {
-        contact_id.classList.toggle("non-vis");
-    }
+  if (contact_id.classList.contains("non-vis")) {
+    contact_id.classList.toggle("non-vis");
+  }
 
-    contact_id.classList.toggle("vis");
+  contact_id.classList.toggle("vis");
 
-    if (about_me_mobile.classList.contains("is-active")) {
-        about_me_mobile.classList.toggle("is-active");
-    }
+  if (about_me_mobile.classList.contains("is-active")) {
+    about_me_mobile.classList.toggle("is-active");
+  }
 
-    if (tech_mobile.classList.contains("is-active")) {
-        tech_mobile.classList.toggle("is-active");
-    }
+  if (tech_mobile.classList.contains("is-active")) {
+    tech_mobile.classList.toggle("is-active");
+  }
 
-    if (skills_mobile.classList.contains("is-active")) {
-        skills_mobile.classList.toggle("is-active");
-    }
+  if (skills_mobile.classList.contains("is-active")) {
+    skills_mobile.classList.toggle("is-active");
+  }
 
-    if (projects_mobile.classList.contains("is-active")) {
-        projects_mobile.classList.toggle("is-active");
-    }
+  if (projects_mobile.classList.contains("is-active")) {
+    projects_mobile.classList.toggle("is-active");
+  }
 
-    if (home_mobile.classList.contains("is-active")) {
-        home_mobile.classList.toggle("is-active");
-    }
+  if (home_mobile.classList.contains("is-active")) {
+    home_mobile.classList.toggle("is-active");
+  }
 
+  if (home_id.classList.contains("vis")) {
+    home_id.classList.toggle("vis");
+  }
 
-    if (home_id.classList.contains("vis")) {
-        home_id.classList.toggle("vis");
-    }
+  if (tech_id.classList.contains("vis")) {
+    tech_id.classList.toggle("vis");
+  }
 
-    if (tech_id.classList.contains("vis")) {
-        tech_id.classList.toggle("vis");
-    }
+  if (skills_id.classList.contains("vis")) {
+    skills_id.classList.toggle("vis");
+  }
 
-    if (skills_id.classList.contains("vis")) {
-        skills_id.classList.toggle("vis");
-    }
+  if (projects_id.classList.contains("vis")) {
+    projects_id.classList.toggle("vis");
+  }
 
-    if (projects_id.classList.contains("vis")) {
-        projects_id.classList.toggle("vis");
-    }
+  if (about_me_id.classList.contains("vis")) {
+    about_me_id.classList.toggle("vis");
+  }
 
-    if (about_me_id.classList.contains("vis")) {
-        about_me_id.classList.toggle("vis");
-    }
+  hamburgerToggle();
 
-    hamburgerToggle();
-
-    print();
+  print();
 }
 
 function hamburgerToggle() {
-    hamburger.classList.toggle("is-active");
-    mobile_menu.classList.toggle("is-open");
+  hamburger.classList.toggle("is-active");
+  mobile_menu.classList.toggle("is-open");
 }
-
-
 
 //Skill Tab Methods
 
 function displayPercentage() {
-
-    displayPercentageAccountability();
-    displayPercentageCreativity();
-    displayPercentageCriticalThinking();
-    displayPercentageTeamWrok();
+  displayPercentageAccountability();
+  displayPercentageCreativity();
+  displayPercentageCriticalThinking();
+  displayPercentageTeamWrok();
 }
 
-
 function displayPercentageCriticalThinking() {
-    let count = document.getElementById("criticalThinking");
-    let temp = 0;
+  let count = document.getElementById("criticalThinking");
+  let temp = 0;
 
-    setInterval(() => {
-        if (temp == 85) {
-            clearInterval();
-        } else {
-            temp++;
-            count.innerHTML = temp + " % ";
-        }
-    }, 33);
-
+  setInterval(() => {
+    if (temp == 85) {
+      clearInterval();
+    } else {
+      temp++;
+      count.innerHTML = temp + " % ";
+    }
+  }, 33);
 }
 
 function displayPercentageAccountability() {
-    let count = document.getElementById("accountability");
-    let temp = 0;
+  let count = document.getElementById("accountability");
+  let temp = 0;
 
-    setInterval(() => {
-        if (temp == 90) {
-            clearInterval();
-        } else {
-            temp++;
-            count.innerHTML = temp + " % ";
-        }
-    }, 33);
-
+  setInterval(() => {
+    if (temp == 90) {
+      clearInterval();
+    } else {
+      temp++;
+      count.innerHTML = temp + " % ";
+    }
+  }, 33);
 }
 
 function displayPercentageTeamWrok() {
-    let count = document.getElementById("team-wrok");
-    let temp = 0;
+  let count = document.getElementById("team-wrok");
+  let temp = 0;
 
-    setInterval(() => {
-        if (temp == 80) {
-            clearInterval();
-        } else {
-            temp++;
-            count.innerHTML = temp + " % ";
-        }
-    }, 33);
-
+  setInterval(() => {
+    if (temp == 80) {
+      clearInterval();
+    } else {
+      temp++;
+      count.innerHTML = temp + " % ";
+    }
+  }, 33);
 }
 
 function displayPercentageCreativity() {
-    let count = document.getElementById("creativity");
-    let temp = 0;
+  let count = document.getElementById("creativity");
+  let temp = 0;
 
-    setInterval(() => {
-        if (temp == 95) {
-            clearInterval();
-        } else {
-            temp++;
-            count.innerHTML = temp + " % ";
-        }
-    }, 33);
-
+  setInterval(() => {
+    if (temp == 95) {
+      clearInterval();
+    } else {
+      temp++;
+      count.innerHTML = temp + " % ";
+    }
+  }, 33);
 }
-
 
 // //Project Methods
 // function loadProject() {
@@ -853,8 +841,6 @@ function displayPercentageCreativity() {
 
 //             }, 800);
 
-
-
 //             console.log('current ' + current);
 //             console.log('prev ' + prev);
 
@@ -866,110 +852,107 @@ function displayPercentageCreativity() {
 //     });
 // }
 
-
 //Prints elements for finding errors --optional
 function print() {
-    console.log(home_id.classList);
-    console.log(projects_id.classList);
-    console.log(tech_id.classList);
-    console.log(skills_id.classList);
-    console.log(contact_id.classList);
-    console.log(about_me_id.classList);
+  console.log(home_id.classList);
+  console.log(projects_id.classList);
+  console.log(tech_id.classList);
+  console.log(skills_id.classList);
+  console.log(contact_id.classList);
+  console.log(about_me_id.classList);
 }
-
 
 //Project Methods
 function loadProject() {
-
-    $(function () {
-        $('.carousel-item').eq(0).addClass('active');
-        var total = $('.carousel-item').length;
-        var current = 0;
-        $('#moveRight').on('click', function () {
-            var next = current;
-            current = current + 1;
-            setSlide(next, current);
-            console.log("heelo world");
-        });
-        $('#moveLeft').on('click', function () {
-            var prev = current;
-            current = current - 1;
-            setSlide(prev, current);
-            console.log("heelo world");
-        });
-        function setSlide(prev, next) {
-            var slide = current;
-            if (next > total - 1) {
-                slide = 0;
-                current = 0;
-            }
-            if (next < 0) {
-                slide = total - 1;
-                current = total - 1;
-            }
-            $('.carousel-item').eq(prev).removeClass('active');
-            $('.carousel-item').eq(slide).addClass('active');
-            setTimeout(function () {
-
-            }, 800);
-
-
-
-            console.log('current ' + current);
-            console.log('prev ' + prev);
-
-            if (current == prev) {
-                alert("No More Projects Available ...");
-            }
-
-        }
+  $(function () {
+    $(".carousel-item").eq(0).addClass("active");
+    var total = $(".carousel-item").length;
+    var current = 0;
+    $("#moveRight").on("click", function () {
+      var next = current;
+      current = current + 1;
+      setSlide(next, current);
+      console.log("heelo world");
     });
-}
+    $("#moveLeft").on("click", function () {
+      var prev = current;
+      current = current - 1;
+      setSlide(prev, current);
+      console.log("heelo world");
+    });
+    function setSlide(prev, next) {
+      var slide = current;
+      if (next > total - 1) {
+        slide = 0;
+        current = 0;
+      }
+      if (next < 0) {
+        slide = total - 1;
+        current = total - 1;
+      }
+      $(".carousel-item").eq(prev).removeClass("active");
+      $(".carousel-item").eq(slide).addClass("active");
+      setTimeout(function () {}, 800);
 
+      console.log("current " + current);
+      console.log("prev " + prev);
+
+      if (current == prev) {
+        alert("No More Projects Available ...");
+      }
+    }
+  });
+}
 
 //source stack overflow
 function activeTabScroll() {
+  $(document).ready(function () {
+    $(document).on("scroll", onScroll);
 
+    //smoothscroll
+    $('a[href^="#"]').on("click", function (e) {
+      e.preventDefault();
+      $(document).off("scroll");
 
-    $(document).ready(function () {
-        $(document).on("scroll", onScroll);
+      $("a").each(function () {
+        $(this).removeClass("is-active");
+      });
+      $(this).addClass("is-active");
 
-        //smoothscroll
-        $('a[href^="#"]').on('click', function (e) {
-            e.preventDefault();
-            $(document).off("scroll");
-
-            $('a').each(function () {
-                $(this).removeClass('is-active');
-            })
-            $(this).addClass('is-active');
-
-            var target = this.hash,
-                menu = target;
-            $target = $(target);
-            $('html, body').stop().animate({
-                'scrollTop': $target.offset().top + 2
-            }, 500, 'swing', function () {
-                window.location.hash = target;
-                $(document).on("scroll", onScroll);
-            });
-        });
+      var target = this.hash,
+        menu = target;
+      $target = $(target);
+      $("html, body")
+        .stop()
+        .animate(
+          {
+            scrollTop: $target.offset().top + 2,
+          },
+          500,
+          "swing",
+          function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+          }
+        );
     });
+  });
 
-    function onScroll(event) {
-        var scrollPos = $(document).scrollTop();
-        $('.menu a').each(function () {
-            console.log("hello");
-            var currLink = $(this);
-            var refElement = $(currLink.attr("href"));
-            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-                $('.menu ul li a').removeClass("is-active");
-                currLink.addClass("is-active");
-            }
-            else {
-                currLink.removeClass("is-active");
-            }
-        });
-    }
+  function onScroll(event) {
+    var scrollPos = $(document).scrollTop();
+    $(".menu a").each(function () {
+      console.log("hello");
+      var currLink = $(this);
+      var refElement = $(currLink.attr("href"));
+      if (
+        refElement.position().top <= scrollPos &&
+        refElement.position().top + refElement.height() > scrollPos
+      ) {
+        $(".menu ul li a").removeClass("is-active");
+        currLink.addClass("is-active");
+      } else {
+        currLink.removeClass("is-active");
+      }
+    });
+  }
 }
-
