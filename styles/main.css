@@ -1011,7 +1011,16 @@ ul {
   #content-stack div {
     gap: 5px;
   }
+  #stats{
+    display: flex;
+    flex-direction: column;
+  }
 
+  #stats img{
+    width: 100%;
+    height: 150px;
+    border: none;
+  }
   #content-skills {
     padding-top: 50px;
     gap: 100px;
@@ -1048,7 +1057,6 @@ ul {
 /* css for below 800px height */
 @media screen and (max-height: 812px) and (max-width: 430px) {
   #tech-stack {
-    height: 200vh;
     margin-top: 450px;
     margin-bottom: 100px;
   }
