@@ -65,6 +65,7 @@ nav {
   color: #fff;
 }
 
+
 main {
   background: var(--dark);
 }
@@ -205,6 +206,9 @@ ul {
   transition: 0.4s;
   padding: 8px 16px;
   border-radius: 99px;
+}
+.resume{
+  background-color: var(--primary);
 }
 
 .menu a.is-active,
