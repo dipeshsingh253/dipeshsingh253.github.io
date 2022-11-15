@@ -848,7 +848,7 @@ ul {
 /* css for ipad os */
 @media screen and (max-height: 1300px) and (max-width: 880px) {
   ul {
-    font-size: 13px;
+    font-size: 10px;
   }
 }
 
