@@ -438,7 +438,6 @@ ul {
   font-weight: 900;
   font-size: 1rem;
   border: transparent;
-
 }
 
 #tech-stack {
@@ -486,6 +485,12 @@ ul {
 }
 
 #content-stack > div:nth-child(2) {
+  /* display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px; */
   display: none;
 }
 #content-stack > div:nth-child(3) {
@@ -672,8 +677,8 @@ ul {
   margin-top: 300px;
 }
 
-#projects a{
-    color: var(--primary);
+#projects a {
+  color: var(--primary);
 }
 
 #projects > h1 {
@@ -743,7 +748,6 @@ ul {
   font-size: 0.8em;
   color: var(--primary);
 }
-
 
 /* animation keyframes */
 @keyframes shring-animation {
@@ -888,19 +892,17 @@ ul {
   }
 }
 
-
 /* media queries */
 
 @media (max-width: 420px) {
-    #stats img {
-      width: 280px;
-    }
-  
-    #stats > img {
-      width: 280px;
-    }
+  #stats img {
+    width: 280px;
   }
-  
+
+  #stats > img {
+    width: 280px;
+  }
+}
 
 @media (min-width: 768px) {
   .hamburger,
@@ -911,7 +913,7 @@ ul {
   .menu {
     display: flex;
   }
-  ul{
+  ul {
     flex-direction: row;
   }
   .intro-box h1:nth-child(1) {
@@ -931,7 +933,7 @@ ul {
     display: inline;
   }
 
-  #about-me{
+  #about-me {
     height: 100vh;
   }
 
@@ -944,7 +946,7 @@ ul {
     height: 100%;
   }
 
-  .profile img{
+  .profile img {
     width: 250px;
     height: 250px;
   }
@@ -954,48 +956,54 @@ ul {
   #stats img {
     width: 300px;
   }
-  
+
   #stats > img {
     width: 500px;
   }
-
+  #content-stack > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
 }
 
-@media (min-width:1020px) {
-    #stats img {
-        width: 400px;
-      }
-      
-      #stats > img {
-        width: 800px;
-      }
-      #content-skills {
-        flex-direction: row;
-        position: relative;
-      }
+@media (min-width: 1020px) {
+  #stats img {
+    width: 400px;
+  }
+  #stats > img {
+    width: 800px;
+  }
+  #content-skills {
+    flex-direction: row;
+    position: relative;
+  }
+  .tech-skills > h1,
+  .soft-skills > h1 {
+    position: absolute;
+    top: 10px;
+    left: 1;
+  }
 
-    .tech-skills > h1, .soft-skills > h1 {
-        position: absolute;
-        top: 10px;
-        left: 1;
-      }
-      
-      .tech-skills{
-        padding-top: 100px;
-        width: 50%;
-      }
+  .tech-skills {
+    padding-top: 100px;
+    width: 50%;
+  }
 
-      .soft-skills{
-        padding-top: 130px;
-        width: 50%;
-      }
-      .menu a{
-        font-weight: 600;
-        margin:0 16px;
-      }
-      .row {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-      }
+  .soft-skills {
+    padding-top: 130px;
+    width: 50%;
+  }
+  .menu a {
+    font-weight: 600;
+    margin: 0 16px;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
 }
