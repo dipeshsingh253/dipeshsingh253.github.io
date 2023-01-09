@@ -685,6 +685,7 @@ ul {
   border-bottom: 3px solid var(--primary);
 }
 
+
 #projects > div {
   padding-top: 30px;
   width: 85%;
@@ -720,6 +721,13 @@ ul {
   justify-content: space-around;
   align-items: center;
 }
+
+
+.details span{
+  color: var(--primary);
+}
+
+
 .details > div {
   display: flex;
   width: 100%;
